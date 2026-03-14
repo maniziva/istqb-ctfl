@@ -19,6 +19,7 @@ let state = {
     flipped: false,
   },
   progress: JSON.parse(localStorage.getItem('istqb_progress') || '{}'),
+  daily: JSON.parse(localStorage.getItem('istqb_daily') || '{}'),
 };
 
 // ===== NAVIGATION =====
@@ -479,6 +480,7 @@ function endQuiz() {
   const pct = total > 0 ? Math.round((score / total) * 100) : 0;
   const passed = pct >= 65;
   const timeTaken = Math.round((Date.now() - startTime) / 1000 / 60);
+  if (timeTaken > 0) saveDailyTime(timeTaken);
 
   document.getElementById('quiz-area').innerHTML = `
     <div class="quiz-card results-card">
@@ -752,6 +754,24 @@ function renderReference() {
 }
 
 // ===== PROGRESS PAGE =====
+function getStreak() {
+  const dates = Object.keys(state.daily).sort();
+  if (dates.length === 0) return 0;
+  const today = new Date().toISOString().slice(0, 10);
+  let streak = 0;
+  let check = new Date(today);
+  while (true) {
+    const d = check.toISOString().slice(0, 10);
+    if (state.daily[d] && state.daily[d].attempted > 0) {
+      streak++;
+      check.setDate(check.getDate() - 1);
+    } else {
+      break;
+    }
+  }
+  return streak;
+}
+
 function renderProgressPage() {
   const p = state.progress;
   const container = document.getElementById('progress-content');
@@ -760,7 +780,96 @@ function renderProgressPage() {
   const totalCorrect = Object.values(p).reduce((s, c) => s + (c.correct || 0), 0);
   const overallPct = totalAttempted ? Math.round((totalCorrect / totalAttempted) * 100) : 0;
 
+  const today = new Date().toISOString().slice(0, 10);
+  const todayData = state.daily[today] || { attempted: 0, correct: 0, minutes: 0 };
+  const streak = getStreak();
+
+  // Last 14 days for activity log
+  const days = [];
+  for (let i = 13; i >= 0; i--) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    const key = d.toISOString().slice(0, 10);
+    days.push({ key, data: state.daily[key] || null, label: d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' }) });
+  }
+  const maxAttempted = Math.max(...days.map(d => d.data ? d.data.attempted : 0), 1);
+
   container.innerHTML = `
+    <!-- Daily Overview Cards -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:16px; margin-bottom:24px">
+      <div class="card" style="text-align:center; padding:20px">
+        <div style="font-size:40px; font-weight:900; color:${streak > 0 ? '#f59e0b' : 'var(--text-muted)'}">${streak}</div>
+        <div style="font-size:13px; font-weight:600; color:var(--text-muted)">🔥 Day Streak</div>
+      </div>
+      <div class="card" style="text-align:center; padding:20px">
+        <div style="font-size:40px; font-weight:900; color:var(--primary)">${todayData.attempted}</div>
+        <div style="font-size:13px; font-weight:600; color:var(--text-muted)">Today's Questions</div>
+      </div>
+      <div class="card" style="text-align:center; padding:20px">
+        <div style="font-size:40px; font-weight:900; color:var(--success)">${todayData.attempted ? Math.round((todayData.correct / todayData.attempted) * 100) : 0}%</div>
+        <div style="font-size:13px; font-weight:600; color:var(--text-muted)">Today's Accuracy</div>
+      </div>
+      <div class="card" style="text-align:center; padding:20px">
+        <div style="font-size:40px; font-weight:900; color:#7c3aed">${todayData.minutes || 0}</div>
+        <div style="font-size:13px; font-weight:600; color:var(--text-muted)">Min Studied Today</div>
+      </div>
+    </div>
+
+    <!-- 14-Day Activity Chart -->
+    <div class="card" style="margin-bottom:24px">
+      <h3 style="font-size:18px; font-weight:700; margin-bottom:16px">📅 Last 14 Days Activity</h3>
+      <div style="display:flex; align-items:flex-end; gap:6px; height:80px; padding-bottom:4px">
+        ${days.map(d => {
+          const h = d.data ? Math.max(8, Math.round((d.data.attempted / maxAttempted) * 72)) : 0;
+          const pct = d.data && d.data.attempted ? Math.round((d.data.correct / d.data.attempted) * 100) : 0;
+          const color = !d.data ? 'var(--border)' : pct >= 65 ? 'var(--success)' : pct >= 40 ? '#f59e0b' : 'var(--danger)';
+          const isToday = d.key === today;
+          return `<div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:4px" title="${d.label}: ${d.data ? d.data.attempted + ' questions, ' + pct + '%' : 'No activity'}">
+            <div style="width:100%; border-radius:4px 4px 0 0; background:${color}; height:${h}px; transition:height 0.3s; border: ${isToday ? '2px solid var(--primary)' : 'none'}"></div>
+          </div>`;
+        }).join('')}
+      </div>
+      <div style="display:flex; gap:6px; margin-top:6px">
+        ${days.map(d => `
+          <div style="flex:1; text-align:center; font-size:9px; color:${d.key === today ? 'var(--primary)' : 'var(--text-muted)'}; font-weight:${d.key === today ? '700' : '400'}">${d.label.split(' ')[0]}</div>
+        `).join('')}
+      </div>
+      <div style="display:flex; gap:16px; margin-top:12px; font-size:12px; color:var(--text-muted)">
+        <span><span style="display:inline-block;width:10px;height:10px;background:var(--success);border-radius:2px;margin-right:4px"></span>≥65%</span>
+        <span><span style="display:inline-block;width:10px;height:10px;background:#f59e0b;border-radius:2px;margin-right:4px"></span>40-64%</span>
+        <span><span style="display:inline-block;width:10px;height:10px;background:var(--danger);border-radius:2px;margin-right:4px"></span>&lt;40%</span>
+        <span><span style="display:inline-block;width:10px;height:10px;background:var(--border);border-radius:2px;margin-right:4px"></span>No activity</span>
+      </div>
+    </div>
+
+    <!-- Daily Log Table -->
+    <div class="card" style="margin-bottom:24px">
+      <h3 style="font-size:18px; font-weight:700; margin-bottom:16px">🗓 Daily Log</h3>
+      ${Object.keys(state.daily).length === 0
+        ? `<div style="text-align:center; color:var(--text-muted); padding:20px">No sessions yet — start a quiz to begin tracking!</div>`
+        : `<div style="overflow-x:auto">
+            <table class="lo-table">
+              <thead><tr><th>Date</th><th>Questions</th><th>Correct</th><th>Accuracy</th><th>Time</th></tr></thead>
+              <tbody>
+                ${Object.keys(state.daily).sort().reverse().slice(0, 14).map(d => {
+                  const row = state.daily[d];
+                  const acc = row.attempted ? Math.round((row.correct / row.attempted) * 100) : 0;
+                  const dateLabel = new Date(d).toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short' });
+                  return `<tr>
+                    <td style="font-weight:${d === today ? '700' : '400'}; color:${d === today ? 'var(--primary)' : 'inherit'}">${dateLabel}${d === today ? ' (Today)' : ''}</td>
+                    <td>${row.attempted}</td>
+                    <td>${row.correct}</td>
+                    <td><span style="color:${acc >= 65 ? 'var(--success)' : acc >= 40 ? '#f59e0b' : 'var(--danger)'}; font-weight:700">${acc}%</span></td>
+                    <td>${row.minutes > 0 ? row.minutes + ' min' : '—'}</td>
+                  </tr>`;
+                }).join('')}
+              </tbody>
+            </table>
+          </div>`
+      }
+    </div>
+
+    <!-- Overall Score -->
     <div class="card" style="text-align:center; margin-bottom:24px">
       <div style="font-size:56px; font-weight:900; color:${overallPct >= 65 ? 'var(--success)' : 'var(--warning)'}">${overallPct}%</div>
       <div style="font-size:18px; font-weight:600; margin-bottom:4px">Overall Score</div>
@@ -791,9 +900,12 @@ function renderProgressPage() {
       }).join('')}
     </div>
 
-    <div style="text-align:center; margin-top:20px">
+    <div style="text-align:center; margin-top:20px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap">
       <button class="btn btn-danger btn-sm" onclick="if(confirm('Reset all progress?')) { localStorage.removeItem('istqb_progress'); state.progress={}; renderProgressPage(); showToast('Progress reset'); }">
         Reset Progress
+      </button>
+      <button class="btn btn-outline btn-sm" onclick="if(confirm('Reset daily log?')) { localStorage.removeItem('istqb_daily'); state.daily={}; renderProgressPage(); showToast('Daily log reset'); }">
+        Reset Daily Log
       </button>
     </div>
   `;
@@ -882,6 +994,20 @@ function saveProgress(chapterId, correct, qId) {
   if (correct) state.progress[chapterId].correct++;
   if (!state.progress[chapterId].seen.includes(qId)) state.progress[chapterId].seen.push(qId);
   localStorage.setItem('istqb_progress', JSON.stringify(state.progress));
+
+  // Daily tracking
+  const today = new Date().toISOString().slice(0, 10);
+  if (!state.daily[today]) state.daily[today] = { attempted: 0, correct: 0, minutes: 0 };
+  state.daily[today].attempted++;
+  if (correct) state.daily[today].correct++;
+  localStorage.setItem('istqb_daily', JSON.stringify(state.daily));
+}
+
+function saveDailyTime(minutes) {
+  const today = new Date().toISOString().slice(0, 10);
+  if (!state.daily[today]) state.daily[today] = { attempted: 0, correct: 0, minutes: 0 };
+  state.daily[today].minutes += minutes;
+  localStorage.setItem('istqb_daily', JSON.stringify(state.daily));
 }
 
 function showToast(msg) {
