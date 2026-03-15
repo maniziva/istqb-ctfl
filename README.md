@@ -2,7 +2,7 @@
 
 A local/hosted study site for the **ISTQB Certified Tester Foundation Level (CTFL) v4.0** exam, tailored for candidates in India.
 
-🌐 **Live Site:** [https://maniziva.github.io/istqb-ctfl](https://maniziva.github.io/istqb-ctfl)
+🌐 **Live Site:** [https://maniziva-qa.github.io/istqb-ctfl](https://maniziva-qa.github.io/istqb-ctfl)
 
 ---
 
