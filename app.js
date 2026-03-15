@@ -41,13 +41,16 @@ function navigate(page) {
 // ===== HOME PAGE =====
 function renderHome() {
   const chapterGrid = document.getElementById('home-chapters');
+  const qCountByChapter = {};
+  QUESTIONS.forEach(q => { qCountByChapter[q.chapter] = (qCountByChapter[q.chapter] || 0) + 1; });
+
   chapterGrid.innerHTML = SYLLABUS.chapters.map(ch => `
     <div class="chapter-card" onclick="navigate('syllabus'); setTimeout(() => selectChapter(${ch.id}), 100)"
          style="border-left-color: ${ch.color}">
       <div class="chapter-header">
         <span class="chapter-num" style="color:${ch.color}">Chapter ${ch.id}</span>
         <span class="chapter-badge" style="background:${ch.color}22; color:${ch.color}">
-          ${ch.examQuestions} Q's
+          ${ch.examQuestions} exam Q's
         </span>
       </div>
       <h3>${ch.title}</h3>
@@ -55,6 +58,10 @@ function renderHome() {
         <span>⏱ ${ch.duration}</span>
         <span>📋 ${ch.learningObjectives.length} LOs</span>
         <span>📂 ${ch.sections.length} sections</span>
+      </div>
+      <div style="margin-top:10px; padding-top:10px; border-top:1px solid #f0f0f0; display:flex; align-items:center; gap:6px">
+        <span style="font-size:13px; color:var(--text-muted)">🎯 Practice questions:</span>
+        <span style="font-size:14px; font-weight:700; color:${ch.color}">${qCountByChapter[ch.id] || 0}</span>
       </div>
     </div>
   `).join('');

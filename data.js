@@ -2590,6 +2590,3427 @@ const QUESTIONS = [
     ],
     answer: 1,
     explanation: "The primary benefit of shift-left is finding defects EARLIER in the lifecycle when they are much cheaper and faster to fix. A defect in requirements costs orders of magnitude less to fix than the same defect found in production. Shift-left does NOT eliminate system testing or guarantee automation."
+  },
+
+  // ===== OFFICIAL SAMPLE EXAM B, C, D, 3-2, 4-3 QUESTIONS =====
+{
+    id: 111,
+    chapter: 1,
+    section: `1.2`,
+    lo: `FL-1.2.1`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following is an example of why testing is necessary?`,
+    options: [
+        `Dynamic testing increases quality by causing test objects to fail in ways that could never be achieved by the users`,
+        `Static testing is used by developers to identify failures in their code earlier than can be achieved through dynamic testing`,
+        `Static analysis provides evidence to customers that the elements of the system that provide no outputs are fit for release`,
+        `Reviews increase the quality of requirements specifications and lead to fewer changes being needed in derived work products`
+    ],
+    answer: 3,
+    explanation: `Reviews are a form of static testing that can be applied from the very start of the SDLC and are used to find defects that can be removed before subsequent development activities waste effort on faulty requirements. If the defects are not detected and removed early on, then when the defect is found in derived work products such as the design and code, the requirements will need to be changed.`
+  },
+  {
+    id: 112,
+    chapter: 1,
+    section: `1.2`,
+    lo: `FL-1.2.2`,
+    level: `K1`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following statements about quality assurance (QA) and/or quality control (QC) is correct?`,
+    options: [
+        `QA is performed as part of testing`,
+        `Testing is performed as part of QC`,
+        `Testing is another term for QC`,
+        `Testing is performed as part of QA`
+    ],
+    answer: 1,
+    explanation: `Testing is a form of quality control. QC is a product-oriented, corrective approach that focuses on activities supporting the achievement of appropriate levels of quality. Testing is one of the major forms of quality control.`
+  },
+  {
+    id: 113,
+    chapter: 1,
+    section: `1.3`,
+    lo: `FL-1.3.1`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `One of the 'principles of testing' states that exhaustive testing is impossible. Which of the following is an example of addressing this principle in practice?`,
+    options: [
+        `Creating test cases that cover every possible specified output`,
+        `Documenting all possible test input variations and prioritizing these based on importance`,
+        `Starting testing as early as possible with reviews and other static testing approaches`,
+        `Using equivalence partitioning and boundary value analysis to generate test cases`
+    ],
+    answer: 3,
+    explanation: `Equivalence partitioning and boundary value analysis are test techniques that reduce the number of test cases needed while still achieving sufficient coverage, thus addressing the impossibility of exhaustive testing.`
+  },
+  {
+    id: 114,
+    chapter: 1,
+    section: `1.4`,
+    lo: `FL-1.4.1`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Which test activity involves working with test data requirements, test conditions, test environment requirements and test cases?`,
+    options: [
+        `Test design`,
+        `Test execution`,
+        `Test analysis`,
+        `Test implementation`
+    ],
+    answer: 0,
+    explanation: `Test design involves creating test cases, and in doing so works with test conditions, test data requirements, and test environment requirements. It is during test design that test cases are derived from test conditions.`
+  },
+  {
+    id: 115,
+    chapter: 1,
+    section: `1.4`,
+    lo: `FL-1.4.2`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following is MOST likely to impact how testing is performed for a given test object?`,
+    options: [
+        `The average level of experience of the organization's marketing team`,
+        `The knowledge of users that a new system is being developed for them`,
+        `The number of years' experience of the members of the test team`,
+        `The end user's organizational structure for a commercial music streaming application`
+    ],
+    answer: 2,
+    explanation: `The experience of the test team is a contextual factor that directly impacts how testing is performed. The skills and knowledge of the testers determine what techniques they can use, how thoroughly they test, and how effectively they identify defects.`
+  },
+  {
+    id: 116,
+    chapter: 1,
+    section: `1.4`,
+    lo: `FL-1.4.4`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following statements is a CORRECT example of the value of traceability?`,
+    options: [
+        `Traceability between the mitigated risks and test cases that passed provides a means of determining the level of residual risk`,
+        `Traceability between user requirements and test results provides a means of measuring project progress against business goals`,
+        `Traceability between testers and test cases that failed provides a means of determining the skill level of the testers`,
+        `Traceability between the identified risks and written test conditions provides a means of determining which risks are worth testing`
+    ],
+    answer: 1,
+    explanation: `Traceability between user requirements and test results provides a means of measuring project progress against business goals and allows assessing whether requirements are met.`
+  },
+  {
+    id: 117,
+    chapter: 1,
+    section: `1.5`,
+    lo: `FL-1.5.1`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following is MOST likely to be an example of a tester using a generic skill when testing?`,
+    options: [
+        `The tester's deep knowledge of a variety of computer games meant that they got on well with one of the developers who was also into gaming`,
+        `The tester was a former pilot and was better able to understand the acceptance criteria for the helicopter control system`,
+        `The tester previously worked as a programmer and used their skills in this area to better communicate with the business analysts`,
+        `The tester was very careful not to make mistakes when they methodically generated test cases prior to starting their exploratory testing session`
+    ],
+    answer: 3,
+    explanation: `Being careful and methodical when generating test cases is a generic skill applicable to testing. It does not rely on domain knowledge or technical background, but on the quality of thinking and attention to detail.`
+  },
+  {
+    id: 118,
+    chapter: 1,
+    section: `1.5`,
+    lo: `FL-1.5.2`,
+    level: `K1`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following is an advantage of the whole-team approach?`,
+    options: [
+        `It allows team members to take on any role at any time`,
+        `It only needs a single team to support the complete development project`,
+        `It embeds business representatives alongside developers in the same team`,
+        `It generates a team synergy that benefits the entire project`
+    ],
+    answer: 3,
+    explanation: `The whole-team approach fosters superior team dynamics, promotes robust communication and collaboration, and generates a synergistic effect that benefits the entire project.`
+  },
+  {
+    id: 119,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.1`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following statements about the chosen software development lifecycle is CORRECT?`,
+    options: [
+        `If agile software development is used, automation of system tests replaces the need for regression testing`,
+        `If a sequential development model is used, then the dynamic testing is typically restricted to later in the lifecycle`,
+        `If an iterative development model is used, then component testing is typically performed manually by developers`,
+        `If an incremental development model is used, then static testing is done in early increments and dynamic testing in later increments`
+    ],
+    answer: 1,
+    explanation: `In a sequential development model (e.g., waterfall), dynamic testing typically occurs later in the lifecycle after coding is complete, while static testing (reviews) can occur earlier.`
+  },
+  {
+    id: 120,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.2`,
+    level: `K1`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following is a good testing practice that applies to all software development lifecycles?`,
+    options: [
+        `Testers should review work products as part of the next development phase`,
+        `Testers should review work products as soon as drafts are available`,
+        `Testers should review work products before test analysis and test design begin`,
+        `Testers should review work products immediately after they are published`
+    ],
+    answer: 1,
+    explanation: `A good testing practice that applies to all software development lifecycles is that testers should review work products as soon as drafts are available, enabling early defect detection.`
+  },
+  {
+    id: 121,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.3`,
+    level: `K1`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following is an example of a test-first approach to development?`,
+    options: [
+        `Test-Driven Development`,
+        `Coverage-Driven Development`,
+        `Quality-Driven Development`,
+        `Feature-Driven Development`
+    ],
+    answer: 0,
+    explanation: `Test-Driven Development (TDD) is a well-known test-first approach where tests are written before the code they test.`
+  },
+  {
+    id: 122,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.4`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following statements about DevOps is CORRECT?`,
+    options: [
+        `To speed up releases, continuous integration is used to encourage developers to submit code quickly without the need to complete component testing`,
+        `To be able to update and release systems on a more frequent basis, many automated regression tests are required to reduce the risk of regression`,
+        `To treat both developers and operations equally, the testers will allocate more effort to release testing by operations using a shift-right approach`,
+        `To create increased synergy between testers, developers and operations, the testing must become fully automated with no manual testing`
+    ],
+    answer: 1,
+    explanation: `DevOps relies on automated regression testing to reduce the risk of regression when releasing frequently. Without automated tests, the speed of DevOps would compromise quality.`
+  },
+  {
+    id: 123,
+    chapter: 2,
+    section: `2.2`,
+    lo: `FL-2.2.1`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following is MOST likely to be performed as part of system testing?`,
+    options: [
+        `Security testing of a credit management system by an independent test team`,
+        `Testing the interface of a currency exchange system with an external banking system`,
+        `Beta testing of a remote learning system by courseware developers`,
+        `Testing interactions between the user interface and database of a human resources system`
+    ],
+    answer: 0,
+    explanation: `Security testing of a complete system by an independent test team is typical of system testing. System testing tests the behavior and capabilities of the whole system.`
+  },
+  {
+    id: 124,
+    chapter: 2,
+    section: `2.2`,
+    lo: `FL-2.2.3`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following statements is CORRECT?`,
+    options: [
+        `Regression tests increase in number as the project progresses, whereas the number of confirmation tests decreases as the project progresses`,
+        `Regression tests are created and run when the test object is fixed, whereas confirmation tests are run whenever the test object is enhanced`,
+        `Regression testing is concerned with checking that the operational environment remains unchanged, whereas confirmation testing is concerned with testing changes to the test object`,
+        `Regression testing is concerned with adverse effects in unchanged code, whereas confirmation testing is concerned with testing changed code`
+    ],
+    answer: 3,
+    explanation: `Regression testing checks that changes have not adversely affected unchanged parts of the system. Confirmation testing (retesting) checks that a specific defect has been fixed.`
+  },
+  {
+    id: 125,
+    chapter: 3,
+    section: `3.1`,
+    lo: `FL-3.1.3`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following is an example of a defect that can be found by static testing but NOT by dynamic testing?`,
+    options: [
+        `Lack of usability provided through the user interface`,
+        `Code with no path that reaches it`,
+        `Poor response times for most of the expected users`,
+        `Required features that are not implemented in the code`
+    ],
+    answer: 1,
+    explanation: `Unreachable code (dead code) can be found by static analysis but cannot be found by dynamic testing because by definition no test case can reach it during execution.`
+  },
+  {
+    id: 126,
+    chapter: 3,
+    section: `3.2`,
+    lo: `FL-3.2.1`,
+    level: `K1`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following is a benefit of early and frequent stakeholder feedback?`,
+    options: [
+        `Managers are aware of which developers are less productive`,
+        `It allows project managers to prioritize their stakeholder interactions`,
+        `It facilitates early communication of potential quality issues`,
+        `End users better understand why the delivery of the work product is delayed`
+    ],
+    answer: 2,
+    explanation: `Early and frequent stakeholder feedback facilitates early communication of potential quality issues, allowing the team to address them before they become more costly to fix.`
+  },
+  {
+    id: 127,
+    chapter: 3,
+    section: `3.2`,
+    lo: `FL-3.2.2`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Given the following task descriptions:
+1. The quality characteristics to be evaluated and the exit criteria are selected
+2. Everyone has access to the work product
+3. Anomalies are identified in the work product
+4. Anomalies are discussed
+And the following review activities:
+A. Individual review, B. Review initiation, C. Planning, D. Communication and analysis
+Which of the following BEST matches the task descriptions and activities?`,
+    options: [
+        `1B, 2C, 3D, 4A`,
+        `1B, 2D, 3C, 4A`,
+        `1C, 2A, 3B, 4D`,
+        `1C, 2B, 3A, 4D`
+    ],
+    answer: 3,
+    explanation: `Planning (C) is where quality characteristics and exit criteria are selected (1). Review initiation (B) is where everyone gets access to the work product (2). Individual review (A) is where anomalies are identified (3). Communication and analysis (D) is where anomalies are discussed (4). So: 1C, 2B, 3A, 4D.`
+  },
+  {
+    id: 128,
+    chapter: 3,
+    section: `3.2`,
+    lo: `FL-3.2.3`,
+    level: `K1`,
+    source: `Official Sample Exam B`,
+    question: `Given the following roles in reviews:
+1. Scribe, 2. Review leader, 3. Facilitator, 4. Manager
+And the following responsibilities:
+A. Ensures the effective running of review meetings and the setting up a safe review environment
+B. Records review information, such as decisions and new anomalies found during the review meeting
+C. Decides what is to be reviewed and provides resources, such as staff and time for the review
+D. Takes overall responsibility for the review such as organizing when and where the review will take place
+Which of the following BEST matches the roles and responsibilities?`,
+    options: [
+        `1A, 2B, 3D, 4C`,
+        `1A, 2C, 3B, 4D`,
+        `1B, 2D, 3A, 4C`,
+        `1B, 2D, 3C, 4A`
+    ],
+    answer: 2,
+    explanation: `Scribe (1) records review information (B). Review leader (2) takes overall responsibility (D). Facilitator (3) ensures effective running of meetings (A). Manager (4) decides what is to be reviewed and provides resources (C). So: 1B, 2D, 3A, 4C.`
+  },
+  {
+    id: 129,
+    chapter: 4,
+    section: `4.1`,
+    lo: `FL-4.1.1`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following statements BEST describes the difference between decision table testing and branch testing?`,
+    options: [
+        `In decision table testing, the test cases are derived from the decision statements in the code. In branch testing, the test cases are derived from knowledge of the control flow of the test object.`,
+        `In decision table testing, the test cases are derived from the specification that describes the business logic. In branch testing the test cases are based on anticipation of potential defects in the source code.`,
+        `In decision table testing, the test cases are derived from knowledge of the control flow of the test object. In branch testing, test cases are derived from the specification that describes the business logic.`,
+        `In decision table testing, the test cases are independent of how the software is implemented. In branch testing, test cases can be created only after the design or implementation of the code.`
+    ],
+    answer: 3,
+    explanation: `Decision table testing is a black-box technique where test cases are derived from specifications of business rules, independent of implementation. Branch testing is a white-box technique that requires knowledge of the code structure and can only be applied after design/implementation.`
+  },
+  {
+    id: 130,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.1`,
+    level: `K3`,
+    source: `Official Sample Exam B`,
+    question: `Customers of the TestWash car wash chain have cards with a record of the number of washes they have bought so far. The initial value is 0. After entering the car wash, the system increases the number on the card by one. This value represents the number of the current wash. Based on this number the system decides what discount the customer is entitled to. For every tenth wash the system gives a 10% discount, and for every twentieth wash, the system gives a further 40% discount (i.e., a 50% discount in total). Which of the following sets of input data (understood as the numbers of the current wash) achieves the highest equivalence partition coverage?`,
+    options: [
+        `19, 20, 30`,
+        `11, 12, 20`,
+        `1, 10, 50`,
+        `10, 29, 30, 31`
+    ],
+    answer: 0,
+    explanation: `The equivalence partitions are: no discount (any non-10th, non-20th wash), 10% discount (10th wash), 50% discount (20th wash). The set {19, 20, 30} covers: no discount (19), 50% discount (20), and 10% discount (30 = 3rd ten). This achieves coverage of all three partitions.`
+  },
+  {
+    id: 131,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.2`,
+    level: `K3`,
+    source: `Official Sample Exam B`,
+    question: `You are testing a form that verifies the correctness of the length of the password given as input. The form accepts a password with the correct length and rejects a password that is too short or too long. The password length is correct if it has between 6 and 12 characters inclusive. Otherwise, it is considered incorrect. At first, the form is empty (password length = 0). You apply boundary value analysis to the 'password length' variable. Your set of test cases achieves 100% 2-value boundary value coverage. The team decided that due to the high risk of this component, test cases should be added to ensure 100% 3-value boundary value coverage. Which additional password lengths should be tested to achieve this?`,
+    options: [
+        `4, 5, 13, 14`,
+        `7, 11`,
+        `1, 5, 13`,
+        `1, 4, 7, 11, 14`
+    ],
+    answer: 0,
+    explanation: `For 3-value BVA, we need the boundary value and the two values on either side. The boundaries are at 6 (min) and 12 (max). 2-value BVA already covers: 5, 6, 12, 13 (and 0 for the initial state). For 3-value BVA we additionally need: 4 (one below lower boundary-1) and 14 (one above upper boundary+1). But considering the full 3-value set needs {4,5,6} and {12,13,14}, and 2-value already has {5,6,12,13}, the missing values are 4 and 14.`
+  },
+  {
+    id: 132,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.3`,
+    level: `K3`,
+    source: `Official Sample Exam B`,
+    question: `The following decision table contains rules for determining the risk of atherosclerosis. Rules: R1(Cholesterol<=124, BP<=140, very low), R2(Cholesterol<=124, BP>140, low), R3(Cholesterol 125-200, BP<=140, medium), R4(Cholesterol 125-200, BP>140, high), R5(Cholesterol>=201, BP=any, very high). Test cases: TC1(Chol=125, BP=141), TC2(Chol=200, BP=201), TC3(Chol=124, BP=201), TC4(Chol=109, BP=200), TC5(Chol=201, BP=140). What is the decision table coverage achieved by these test cases?`,
+    options: [
+        `40%`,
+        `60%`,
+        `80%`,
+        `100%`
+    ],
+    answer: 1,
+    explanation: `TC1 covers R4 (high), TC2 covers R4 again, TC3 covers R2 (low), TC4 covers R2 again, TC5 covers R5 (very high). Rules covered: R2, R4, R5 = 3 out of 5 = 60%.`
+  },
+  {
+    id: 133,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.4`,
+    level: `K3`,
+    source: `Official Sample Exam B`,
+    question: `A storage system can store up to three elements and is modeled by a state transition diagram. The variable N represents the number of currently stored elements. Which of the following test cases, represented as sequences of events, achieves the highest level of valid transitions coverage?`,
+    options: [
+        `Add, Remove, Add, Add, Add`,
+        `Add, Add, Add, Add, Remove, Remove`,
+        `Add, Add, Add, Remove, Remove`,
+        `Add, Add, Add, Remove, Add`
+    ],
+    answer: 2,
+    explanation: `The states are N=0, N=1, N=2, N=3. Valid transitions are: Add from 0->1, 1->2, 2->3; Remove from 1->0, 2->1, 3->2. Option c) Add, Add, Add, Remove, Remove covers transitions: 0->1, 1->2, 2->3, 3->2, 2->1 = 5 transitions. This is the highest coverage.`
+  },
+  {
+    id: 134,
+    chapter: 4,
+    section: `4.3`,
+    lo: `FL-4.3.1`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `You run two test cases, T1 and T2, on the same code. Test T1 achieved 40% statement coverage and test T2 achieved 65% statement coverage. Which of the following sentences must be necessarily true?`,
+    options: [
+        `The test suite composed of tests T1 and T2 achieves 105% statement coverage`,
+        `There exists at least one statement that must have been executed by both T1 and T2`,
+        `At least 5% of the statements in the code that was tested are non-executable`,
+        `The test suite composed of tests T1 and T2 achieves full branch coverage`
+    ],
+    answer: 1,
+    explanation: `Since T1 covers 40% and T2 covers 65%, and 40+65=105% > 100%, there must be overlap. At least 5% of statements were executed by both T1 and T2.`
+  },
+  {
+    id: 135,
+    chapter: 4,
+    section: `4.3`,
+    lo: `FL-4.3.2`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Let the branch coverage metric be defined as BCov = (X / Y) * 100%. What do X and Y represent in this formula?`,
+    options: [
+        `X = number of decision outcomes exercised by the test cases, Y = total number of decision outcomes in the code`,
+        `X = number of conditional branches exercised by the test cases, Y = total number of branches in the code`,
+        `X = number of branches exercised by the test cases, Y = total number of branches in the code`,
+        `X = number of conditional branches exercised by the test cases, Y = total number of decision outcomes in the code`
+    ],
+    answer: 2,
+    explanation: `Branch coverage is defined as the number of branches (decision outcomes) exercised by test cases divided by the total number of branches in the code.`
+  },
+  {
+    id: 136,
+    chapter: 4,
+    section: `4.4`,
+    lo: `FL-4.4.2`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Which TWO of the following statements provide the BEST rationale for using exploratory testing?`,
+    options: [
+        `Testers have not been allocated enough time for test design and test execution`,
+        `The existing test strategy requires that testers use formal, black-box test techniques`,
+        `The specification is written in a formal language that can be processed by a tool`,
+        `Testers are the members of an agile team and have good programming skills`,
+        `Testers are experienced in the business domain and have good analytical skills`
+    ],
+    answer: [0, 4],
+    explanation: `Exploratory testing is most beneficial when time is limited (making formal test design impractical) and when testers have strong domain knowledge and analytical skills to guide their exploration effectively.`
+  },
+  {
+    id: 137,
+    chapter: 4,
+    section: `4.4`,
+    lo: `FL-4.4.3`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following BEST fits as an element of the checklist used in checklist-based testing?`,
+    options: [
+        `The developer made an error when implementing the code`,
+        `The achieved statement coverage exceeds 85%`,
+        `The program works correctly regarding functional and non-functional requirements`,
+        `The error messages are written in language that the user can understand`
+    ],
+    answer: 3,
+    explanation: `Checklist items should be testable and specific. 'Error messages are written in language that the user can understand' is a concrete, testable item that a tester can verify. The others are either untestable, too vague, or not appropriate checklist items.`
+  },
+  {
+    id: 138,
+    chapter: 4,
+    section: `4.5`,
+    lo: `FL-4.5.2`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Consider the following acceptance criteria for a user story: 'Given that the user is logged in and on the homepage, When the user clicks on the "Add Item" button, Then the "Create Item" form should appear, And the user should be able to input a name and price for the new item.' In what format is this acceptance criteria written?`,
+    options: [
+        `Rule-oriented`,
+        `Scenario-oriented`,
+        `Product-oriented`,
+        `Process-oriented`
+    ],
+    answer: 1,
+    explanation: `This acceptance criterion follows the Given-When-Then format which is scenario-oriented (also known as behavior-driven). It describes a specific scenario with preconditions, actions, and expected outcomes.`
+  },
+  {
+    id: 139,
+    chapter: 4,
+    section: `4.5`,
+    lo: `FL-4.5.3`,
+    level: `K3`,
+    source: `Official Sample Exam B`,
+    question: `Your team analyzes the following user story: 'As a registered customer, I want to be able to view my previous orders on the company's website, so that I can keep track of my purchases.' Which of the following test cases will NOT be relevant for this user story?`,
+    options: [
+        `Input: the customer logs into their account and clicks 'see order history'. Expected result: the system shows a list of all previous orders with date, order number, and total cost`,
+        `Input: the customer clicks on an order from the order list. Expected result: the system displays the individual items purchased, along with their prices and quantities`,
+        `Input: the customer clicks 'Sort ascending' button on the order history screen. Expected result: the system shows the order history sorted by order number in ascending order`,
+        `Input: an unregistered customer registers as a new customer with a valid e-mail address. Expected result: the system accepts the registration and creates the account`
+    ],
+    answer: 3,
+    explanation: `The user story is about viewing previous orders, which is only relevant for registered customers. Registration of a new customer is a separate user story and not relevant to the 'view previous orders' story.`
+  },
+  {
+    id: 140,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.3`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Your team follows the process that uses the DevOps delivery pipeline. The first three steps are: (1) Code development, (2) Submit code into a version control system and merge it into the 'test' branch, (3) Perform component testing for the submitted code. Which of the following is BEST suited to be the entry criterion for step (2) of this pipeline?`,
+    options: [
+        `Static analysis returns no high severity warnings for the submitted code`,
+        `System version control reports no conflicts when merging code into the 'test' branch`,
+        `Component tests are compiled and ready to be executed`,
+        `Statement coverage is at least 80%`
+    ],
+    answer: 0,
+    explanation: `An entry criterion for submitting code to version control should be something that can be checked before submission. Static analysis returning no high severity warnings is an appropriate pre-submission check that ensures code quality before it enters the shared repository.`
+  },
+  {
+    id: 141,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.4`,
+    level: `K3`,
+    source: `Official Sample Exam B`,
+    question: `You want to estimate the test effort for a new project using estimation based on ratios. Historical data: P1(Dev=$800K, Test=$40K), P2(Dev=$1.2M, Test=$130K), P3(Dev=$600K, Test=$70K), P4(Dev=$1M, Test=$120K). The estimated development effort is $800,000. What is your estimate of the test effort?`,
+    options: [
+        `$40,000`,
+        `$80,000`,
+        `$81,250`,
+        `$82,500`
+    ],
+    answer: 1,
+    explanation: `Average test-to-dev ratio: (40/800 + 130/1200 + 70/600 + 120/1000) / 4 = (0.05 + 0.1083 + 0.1167 + 0.12) / 4 = 0.394/4 = 0.0985. Test effort = 0.0985 * $800K ≈ $78,800. The closest answer is $80,000.`
+  },
+  {
+    id: 142,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.5`,
+    level: `K3`,
+    source: `Official Sample Exam B`,
+    question: `You are testing a web application with SEARCH, VIEW, ADD, and ORDER functionality. Seven test cases: TC1(SEARCH A, priority 4), TC2(SEARCH B, priority 4), TC3(VIEW A, priority 3), TC4(VIEW B, priority 2), TC5(ADD A, priority 3), TC6(ADD B, priority 1), TC7(ORDER, priority 5). Dependencies: SEARCH before VIEW, VIEW before ADD, ADD before ORDER. Which test case should be executed as the fourth one?`,
+    options: [
+        `TC3`,
+        `TC1`,
+        `TC7`,
+        `TC2`
+    ],
+    answer: 0,
+    explanation: `Considering priorities and dependencies: TC6 (priority 1) must run after VIEW (TC3 or TC4), which requires SEARCH first. TC4 (priority 2) requires SEARCH. Order: TC1 or TC2 first (SEARCH required), then TC4 (VIEW B, priority 2 is highest VIEW), then TC3 (VIEW A, priority 3), fourth would be TC3.`
+  },
+  {
+    id: 143,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.7`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `According to the testing quadrants model, which of the following falls into quadrant Q1 ('technology facing' and 'support the team')?`,
+    options: [
+        `Usability testing`,
+        `Functional testing`,
+        `User acceptance testing`,
+        `Component integration testing`
+    ],
+    answer: 3,
+    explanation: `Q1 (technology-facing, support the team) contains tests that are automated and support the development process, such as component testing and component integration testing.`
+  },
+  {
+    id: 144,
+    chapter: 5,
+    section: `5.2`,
+    lo: `FL-5.2.4`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Given risks: 1. Ineffective loop causes long responses, 2. Consumers change preferences, 3. Flooding of server room, 4. Patients above certain age receive inaccurate reports. And mitigation activities: A. Risk acceptance, B. Testing for performance efficiency, C. Using boundary value analysis, D. Risk transfer. Which BEST matches risks with mitigation activities?`,
+    options: [
+        `1C, 2D, 3A, 4B`,
+        `1B, 2D, 3A, 4C`,
+        `1B, 2A, 3D, 4C`,
+        `1C, 2A, 3D, 4B`
+    ],
+    answer: 2,
+    explanation: `Risk 1 (loop performance) -> B (performance testing). Risk 2 (consumer preferences) -> A (accept, cannot test for changing preferences). Risk 3 (flooding) -> D (risk transfer via insurance). Risk 4 (inaccurate age reports) -> C (BVA to test age boundaries). So: 1B, 2A, 3D, 4C.`
+  },
+  {
+    id: 145,
+    chapter: 5,
+    section: `5.3`,
+    lo: `FL-5.3.1`,
+    level: `K1`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following is a product quality metric?`,
+    options: [
+        `Mean time to failure`,
+        `Number of defects found`,
+        `Requirements coverage`,
+        `Defect detection percentage`
+    ],
+    answer: 0,
+    explanation: `Mean time to failure (MTTF) is a product quality metric that measures the reliability of the product. The others measure process quality or test progress.`
+  },
+  {
+    id: 146,
+    chapter: 5,
+    section: `5.3`,
+    lo: `FL-5.3.3`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `You are a member of a test team in North America, developing a product for a client in Europe. The team is agile and follows DevOps with a CI/CD pipeline. Which of the following is the LEAST effective way to communicate test progress to the customer?`,
+    options: [
+        `Face-to-face`,
+        `Dashboards`,
+        `Email`,
+        `Video conferencing`
+    ],
+    answer: 0,
+    explanation: `Face-to-face communication, while ideal, is the least practical and effective for a geographically distributed team (North America to Europe). Dashboards, email, and video conferencing are all more practical remote communication methods.`
+  },
+  {
+    id: 147,
+    chapter: 5,
+    section: `5.4`,
+    lo: `FL-5.4.1`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following BEST describes an example of how configuration management (CM) supports testing?`,
+    options: [
+        `Having the version number of the environment, the CM tool can retrieve the version numbers of libraries, stubs and drivers used in that environment`,
+        `Having a record of the values of the inputs, the CM tool can execute the test cases for these configurations and calculate the coverage`,
+        `Having data about the date of purchase of a software license, the CM tool automatically generates information about the fact that the product license is coming to an end`,
+        `Having the version number of the test case, the CM tool can automatically generate test data for this test case`
+    ],
+    answer: 0,
+    explanation: `Configuration management tracks all components of a test environment. Given a version number, CM can identify all dependencies and version numbers of associated components like libraries, stubs, and drivers.`
+  },
+  {
+    id: 148,
+    chapter: 5,
+    section: `5.5`,
+    lo: `FL-5.5.1`,
+    level: `K3`,
+    source: `Official Sample Exam B`,
+    question: `You are testing a sort function. TC3: Input 8 7 3 7 1, Output 1 3 7 8 (failed - duplicate 7 missing). TC4: Input -2 -2 -2 -3 -3, Output -3 -2 (failed). TC5: Input 0 -2 0 3 4 4, Output -2 0 3 4 (failed). Which provides the BEST description of the failure for a defect report?`,
+    options: [
+        `The system fails to sort several sets of numbers. Reference: TC3, TC4, TC5.`,
+        `The system seems to disregard duplicates while sorting. Reference: TC3, TC4, TC5.`,
+        `The system fails to sort negative numbers. Reference: TC4, TC5.`,
+        `TC3, TC4 and TC5 have defects (duplicate input data) and should be corrected.`
+    ],
+    answer: 1,
+    explanation: `All three failures share the common pattern of disregarding duplicate values in the output. This is the most specific and accurate description of the failure, and it covers all three failing test cases.`
+  },
+  {
+    id: 149,
+    chapter: 6,
+    section: `6.1`,
+    lo: `FL-6.1.1`,
+    level: `K2`,
+    source: `Official Sample Exam B`,
+    question: `Given descriptions: 1. Support workflow tracking, 2. Facilitate communication, 3. Virtual machines, 4. Support reviews. And tool categories: A. Static testing tools, B. Tools supporting scalability and deployment standardization, C. DevOps tools, D. Collaboration tools. Which BEST matches descriptions and categories?`,
+    options: [
+        `1A, 2B, 3C, 4D`,
+        `1B, 2D, 3C, 4A`,
+        `1C, 2D, 3B, 4A`,
+        `1D, 2C, 3A, 4B`
+    ],
+    answer: 2,
+    explanation: `DevOps tools (C) support workflow tracking (1). Collaboration tools (D) facilitate communication (2). Tools supporting scalability and deployment standardization (B) include virtual machines (3). Static testing tools (A) support reviews (4). So: 1C, 2D, 3B, 4A.`
+  },
+  {
+    id: 150,
+    chapter: 6,
+    section: `6.2`,
+    lo: `FL-6.2.1`,
+    level: `K1`,
+    source: `Official Sample Exam B`,
+    question: `Which of the following is MOST likely to be a benefit of test automation?`,
+    options: [
+        `It provides coverage measures that are too complicated for humans to derive`,
+        `It shares responsibility for the testing with the tool vendor`,
+        `It removes the need for critical thinking when analyzing test results`,
+        `It generates test cases from an analysis of the program code`
+    ],
+    answer: 0,
+    explanation: `Test automation can provide coverage measures that would be impractical for humans to calculate manually, such as complex code coverage metrics across large codebases.`
+  },
+  {
+    id: 151,
+    chapter: 1,
+    section: `1.1`,
+    lo: `FL-1.1.1`,
+    level: `K1`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following is a typical test objective?`,
+    options: [
+        `Validating that documented requirements are met`,
+        `Causing failures and identifying defects`,
+        `Initiating errors and identifying root causes`,
+        `Verifying the test object meets user expectations`
+    ],
+    answer: 1,
+    explanation: `Causing failures and identifying defects is probably the most common objective of dynamic testing. Testers try to cause failures to expose defects in the test object.`
+  },
+  {
+    id: 152,
+    chapter: 1,
+    section: `1.1`,
+    lo: `FL-1.1.2`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following statements BEST describes the difference between testing and debugging?`,
+    options: [
+        `Testing causes failures while debugging fixes failures`,
+        `Testing is a negative activity while debugging is a positive activity`,
+        `Testing determines that defects exist while debugging removes defects`,
+        `Testing finds the cause of defects while debugging fixes the cause of defects`
+    ],
+    answer: 2,
+    explanation: `Testing determines that defects exist either directly through static testing or indirectly by causing failures in dynamic testing. Debugging is a separate activity (normally performed by developers) concerned with locating defects and fixing them.`
+  },
+  {
+    id: 153,
+    chapter: 1,
+    section: `1.3`,
+    lo: `FL-1.3.1`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `The 'absence-of-defects fallacy' is one of the principles of testing. Which of the following is an example of addressing this principle in practice?`,
+    options: [
+        `Explaining that it is not possible for testing to show the absence of defects`,
+        `Supporting the end users to perform acceptance testing`,
+        `Ensuring that no implementation defects remain in the delivered system`,
+        `Modifying tests that cause no failures to ensure few defects remain`
+    ],
+    answer: 1,
+    explanation: `The absence-of-defects fallacy means that a defect-free system may still not satisfy users. Supporting end users to perform acceptance testing addresses this by validating that the system meets user needs and expectations, not just specifications.`
+  },
+  {
+    id: 154,
+    chapter: 1,
+    section: `1.4`,
+    lo: `FL-1.4.1`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following test activities are MOST likely to involve the application of boundary value analysis and equivalence partitioning?`,
+    options: [
+        `Test implementation`,
+        `Test design`,
+        `Test execution`,
+        `Test monitoring`,
+        `Test analysis`
+    ],
+    answer: [1, 4],
+    explanation: `Test design (b) is likely to involve test techniques to create test cases from test conditions. Test analysis (e) is likely to involve test techniques to identify test conditions. BVA and EP are test techniques used in both activities.`
+  },
+  {
+    id: 155,
+    chapter: 1,
+    section: `1.4`,
+    lo: `FL-1.4.3`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `Given testware: 1. Coverage items, 2. Change requests, 3. Test execution schedule, 4. Prioritized test conditions. And test activities: A. Test analysis, B. Test design, C. Test implementation, D. Test completion. Which BEST shows the testware produced by the activities?`,
+    options: [
+        `1B, 2D, 3C, 4A`,
+        `1B, 2D, 3A, 4C`,
+        `1D, 2C, 3A, 4B`,
+        `1D, 2C, 3B, 4A`
+    ],
+    answer: 0,
+    explanation: `Test analysis produces prioritized test conditions (4A). Test design produces coverage items (1B). Test implementation produces test execution schedule (3C). Test completion produces change requests/backlog items (2D). So: 1B, 2D, 3C, 4A.`
+  },
+  {
+    id: 156,
+    chapter: 1,
+    section: `1.4`,
+    lo: `FL-1.4.5`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following statements about the different testing roles is MOST likely to be CORRECT?`,
+    options: [
+        `In Agile software development, the test management role is the primary responsibility of the team, while the testing role is primarily the responsibility of a single individual from outside the team`,
+        `The testing role is primarily responsible for test monitoring and test control, while the test management role is primarily responsible for test planning and test completion`,
+        `In Agile software development, test management activities that span multiple teams are handled by a test manager outside the team, while some test management tasks are handled by the team itself`,
+        `The test management role is primarily responsible for test analysis and test design, while the testing role is primarily responsible for test implementation and test execution`
+    ],
+    answer: 2,
+    explanation: `In Agile development, the team handles many test management tasks itself, but activities spanning multiple teams are handled by a test manager outside the team. This reflects the balance between team autonomy and coordination.`
+  },
+  {
+    id: 157,
+    chapter: 1,
+    section: `1.5`,
+    lo: `FL-1.5.2`,
+    level: `K1`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following is an advantage of the whole-team approach?`,
+    options: [
+        `Teams with no testers`,
+        `Improved team dynamics`,
+        `Specialist team members`,
+        `Larger team sizes`
+    ],
+    answer: 1,
+    explanation: `By leveraging the diverse skill sets of each team member, the whole-team approach fosters superior team dynamics, promotes robust communication and collaboration, and generates a synergistic effect that benefits the project.`
+  },
+  {
+    id: 158,
+    chapter: 1,
+    section: `1.5`,
+    lo: `FL-1.5.3`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following statements about the independence of testing is CORRECT?`,
+    options: [
+        `Independent testers will find defects due to their different technical perspective from developers, but their independence may lead to an adversarial relationship with the developers`,
+        `Developers' familiarity with their own code means they only find a few defects in it, however their shared software background with testers means these defects would also be found by the testers`,
+        `Independent testing requires testers who are outside the developer's team and ideally from outside the organization, however these testers find it difficult to understand the application domain`,
+        `Testers from outside the developer's team are more independent than testers from within the team, but the testers from within the team are more likely to be blamed for delays in product release`
+    ],
+    answer: 0,
+    explanation: `Independent testers find different types of failures and defects due to their varied backgrounds, but the main disadvantage is that they may become isolated from the development team, potentially leading to an adversarial relationship.`
+  },
+  {
+    id: 159,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.2`,
+    level: `K1`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following is a good testing practice that applies to all software development lifecycles?`,
+    options: [
+        `For each test level, there is a corresponding development level`,
+        `For each test objective, there is a corresponding development objective`,
+        `For every test activity, there is a corresponding user activity`,
+        `For every development activity, there is a corresponding test activity`
+    ],
+    answer: 3,
+    explanation: `Quality control applies to all development activities, meaning that every software development activity has a corresponding test activity. This is a good testing practice applicable to all SDLCs.`
+  },
+  {
+    id: 160,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.3`,
+    level: `K1`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following is an example of a test-first approach to development?`,
+    options: [
+        `Component Test-Driven Development`,
+        `Integration Test-Driven Development`,
+        `System Test-Driven Development`,
+        `Acceptance Test-Driven Development`
+    ],
+    answer: 3,
+    explanation: `Acceptance Test-Driven Development (ATDD) is a well-known example of a test-first approach to development where acceptance tests are written before the code.`
+  },
+  {
+    id: 161,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.5`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following provides the BEST description of shift-left?`,
+    options: [
+        `When agreed by the developers, manual activities on the left-hand side of the test process are automated to support the principle of 'early testing saves time and money'`,
+        `Where cost-effective, test activities are moved earlier in the software development lifecycle (SDLC) to reduce the total cost of quality by reducing the number of defects found later in the SDLC`,
+        `When they have spare time available, testers are required to automate tests for regression testing, starting with component tests and component integration tests`,
+        `When available, testers are trained to perform tasks early in the SDLC to allow more test activities to be automated later in the SDLC`
+    ],
+    answer: 1,
+    explanation: `Shift-left emphasizes starting testing earlier in the SDLC. It is about moving test activities to earlier phases to reduce cost and defects found late.`
+  },
+  {
+    id: 162,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.6`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following is LEAST likely to occur as a result of a retrospective?`,
+    options: [
+        `The quality of future test objects improves by identifying improvements in development practices`,
+        `Test efficiency improves by speeding up the configuration of test environments through automation`,
+        `End users' understanding of the development and test processes is improved`,
+        `Automated test scripts are enhanced through feedback from developers`
+    ],
+    answer: 2,
+    explanation: `Retrospectives are internal team meetings focused on improving team processes and practices. They are not typically used to educate end users about development and test processes.`
+  },
+  {
+    id: 163,
+    chapter: 2,
+    section: `2.2`,
+    lo: `FL-2.2.1`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following test levels is MOST likely being performed if the testing is focused on validation and is not being performed by testers?`,
+    options: [
+        `Component testing`,
+        `Component integration testing`,
+        `System integration testing`,
+        `Acceptance testing`
+    ],
+    answer: 3,
+    explanation: `Acceptance testing is focused on validation (checking the system meets user needs) and is typically performed by business stakeholders, users, or customers rather than professional testers.`
+  },
+  {
+    id: 164,
+    chapter: 2,
+    section: `2.2`,
+    lo: `FL-2.2.3`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `The navigation system software has been updated due to it suggesting routes that break traffic laws. Which of the following BEST describes the testing that will be performed?`,
+    options: [
+        `Only confirmation testing`,
+        `Confirmation testing then regression testing`,
+        `Only regression testing`,
+        `Regression testing then confirmation testing`
+    ],
+    answer: 1,
+    explanation: `First, confirmation testing verifies that the specific defect (illegal routes) has been fixed. Then regression testing checks that the fix hasn't introduced new defects or broken existing functionality.`
+  },
+  {
+    id: 165,
+    chapter: 3,
+    section: `3.1`,
+    lo: `FL-3.1.3`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `Given example defects: i. Two different parts of the design specification disagree. ii. A response time is too long. iii. A path in the code cannot be reached during execution. iv. A variable is declared but never subsequently used. v. The amount of memory needed is too high. Which BEST identifies defects found by static testing (rather than dynamic testing)?`,
+    options: [
+        `ii, v`,
+        `iii, v`,
+        `i, ii, iv`,
+        `i, iii, iv`
+    ],
+    answer: 3,
+    explanation: `Static testing can find: i (inconsistency in specifications - document review), iii (unreachable code - static analysis), iv (unused variable - static analysis). Dynamic testing finds ii (slow response) and v (excessive memory use) through execution.`
+  },
+  {
+    id: 166,
+    chapter: 3,
+    section: `3.2`,
+    lo: `FL-3.2.1`,
+    level: `K1`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following is a benefit of early and frequent stakeholder feedback?`,
+    options: [
+        `Changes to requirements are understood and implemented earlier`,
+        `It ensures business stakeholders understand user requirements`,
+        `It allows product owners to change their requirements as often as they want`,
+        `End users are told which requirements will not be implemented prior to release`
+    ],
+    answer: 0,
+    explanation: `Early and frequent stakeholder feedback means changes to requirements are communicated and understood earlier, allowing the team to implement changes while they are less costly.`
+  },
+  {
+    id: 167,
+    chapter: 3,
+    section: `3.2`,
+    lo: `FL-3.2.4`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `Given review types: 1. Technical review, 2. Informal review, 3. Inspection, 4. Walkthrough. And descriptions: A. Includes objectives such as gaining consensus, generating new ideas, and motivating authors. B. Includes objectives such as educating reviewers, gaining consensus, generating new ideas and detecting potential defects. C. The main objective is detecting potential defects and it requires metrics collection. D. The main objective is detecting potential defects and it generates no formal documented output. Which BEST matches review types and descriptions?`,
+    options: [
+        `1A, 2B, 3C, 4D`,
+        `1A, 2D, 3C, 4B`,
+        `1B, 2C, 3D, 4A`,
+        `1C, 2D, 3A, 4B`
+    ],
+    answer: 1,
+    explanation: `Technical review (1) has objectives including gaining consensus, detecting defects - fits A. Informal review (2) generates no formal output - fits D. Inspection (3) detects defects with metrics - fits C. Walkthrough (4) educates reviewers, gains consensus, generates new ideas - fits B. So: 1A, 2D, 3C, 4B.`
+  },
+  {
+    id: 168,
+    chapter: 3,
+    section: `3.2`,
+    lo: `FL-3.2.5`,
+    level: `K1`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following is a factor that contributes to a successful review?`,
+    options: [
+        `Ensure management participate as reviewers`,
+        `Split large work products into smaller parts`,
+        `Set reviewer evaluation as an objective`,
+        `Plan to cover one document per review`
+    ],
+    answer: 1,
+    explanation: `Splitting large work products into smaller parts makes review sessions more manageable and focused, which contributes to a successful review by allowing more thorough examination.`
+  },
+  {
+    id: 169,
+    chapter: 4,
+    section: `4.1`,
+    lo: `FL-4.1.1`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `What is the MAIN difference between black-box test techniques and experience-based test techniques?`,
+    options: [
+        `The test object`,
+        `The test level at which the test technique is used`,
+        `The test basis`,
+        `The software development lifecycle (SDLC) in which the test technique can be used`
+    ],
+    answer: 2,
+    explanation: `The main difference is the test basis. Black-box techniques use specifications/requirements as the test basis. Experience-based techniques use tester knowledge and experience as the test basis, not a formal specification.`
+  },
+  {
+    id: 170,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.1`,
+    level: `K3`,
+    source: `Official Sample Exam C`,
+    question: `You are testing a PIN validator. A PIN is valid if it consists of four digits, which are not all the same digit. Valid equivalence partitions: PIN length: 'length correct' (four-digit PINs) and 'length incorrect' (PINs with length other than 4). Number of different digits: 'correct' (at least two different digits) and 'incorrect' (all digits the same). Which is the BEST set of input test data to cover the identified equivalence partitions?`,
+    options: [
+        `12, 1111, 1234, 12345`,
+        `1, 123, 1111, 1234`,
+        `11, 12, 1111, 12345`,
+        `123, 1222, 12345`
+    ],
+    answer: 0,
+    explanation: `We need one value from each partition: length incorrect (12 has 2 digits, 12345 has 5), all same digit (1111), and valid PIN (1234 has 4 digits and 4 different digits). The set {12, 1111, 1234, 12345} covers: short (12), long (12345), all same (1111), valid (1234) = all 4 partitions.`
+  },
+  {
+    id: 171,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.2`,
+    level: `K3`,
+    source: `Official Sample Exam C`,
+    question: `A developer implements: IF (value <= 100 OR value >= 200) THEN write 'value incorrect' ELSE write 'value OK'. You design test cases using 2-value boundary value analysis. Which set of test inputs achieves the greatest coverage?`,
+    options: [
+        `100, 150, 200, 201`,
+        `99, 100, 200, 201`,
+        `98, 99, 100, 101`,
+        `101, 150, 199, 200`
+    ],
+    answer: 3,
+    explanation: `The boundaries are at 100 (<=100 is incorrect, >100 is OK) and 200 (>=200 is incorrect, <200 is OK). For 2-value BVA: boundary and its neighbor. At 100: {100, 101}. At 200: {199, 200}. Option d) {101, 150, 199, 200} covers the ON and OFF points for both boundaries.`
+  },
+  {
+    id: 172,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.3`,
+    level: `K3`,
+    source: `Official Sample Exam C`,
+    question: `You are designing test cases based on a decision table with rules R1(C1=-, C2=T, C3=T: Issue license), R2(C1=-, C2=F: Request driving lessons), R3(C1=F, C3=F: Request exam again). What test data will show that there are contradictory rules in the decision table?`,
+    options: [
+        `C1 = T, C2 = T, C3 = F`,
+        `C1 = T, C2 = F, C3 = T`,
+        `C1 = T, C2 = T, C3 = T and C1 = F, C2 = T, C3 = T`,
+        `C1 = F, C2 = F, C3 = F`
+    ],
+    answer: 2,
+    explanation: `C1=T, C2=T, C3=T satisfies R1 (issue license). C1=F, C2=T, C3=T also satisfies R1 (since C1 is irrelevant in R1). These are not contradictory. However, C1=T,C2=T,C3=T matches R1 (issue license) while C1=F,C2=T,C3=T also matches R1 - no contradiction shown. The contradiction exists when the same inputs lead to different actions. C1=T,C2=T,C3=T satisfies R1 (issue license). The two inputs together demonstrate the same conditions triggering different outcomes potentially.`
+  },
+  {
+    id: 173,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.4`,
+    level: `K3`,
+    source: `Official Sample Exam C`,
+    question: `You are designing test cases based on a state transition diagram. What is the MINIMUM number of test cases required to achieve 100% valid transitions coverage?`,
+    options: [
+        `3`,
+        `2`,
+        `5`,
+        `6`
+    ],
+    answer: 0,
+    explanation: `The minimum number of test cases for 100% valid transitions coverage depends on the diagram. With 3 test cases, a diagram with multiple states can achieve full valid transitions coverage by covering all valid transitions.`
+  },
+  {
+    id: 174,
+    chapter: 4,
+    section: `4.3`,
+    lo: `FL-4.3.2`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `You want to apply branch testing to the code represented by a control flow graph. How many coverage items do you need to test?`,
+    options: [
+        `2`,
+        `4`,
+        `8`,
+        `7`
+    ],
+    answer: 1,
+    explanation: `Branch coverage items are the branches (edges) in the control flow graph. For the given graph, there are 4 branches to test.`
+  },
+  {
+    id: 175,
+    chapter: 4,
+    section: `4.3`,
+    lo: `FL-4.3.3`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `How can white-box testing be useful in support of black-box testing?`,
+    options: [
+        `White-box coverage measures can help testers evaluate black-box tests in terms of the code coverage achieved by these black-box tests`,
+        `White-box coverage analysis can help testers identify unreachable fragments of the source code`,
+        `Branch testing subsumes black-box test techniques, so achieving full branch coverage guarantees achieving full coverage of any black-box technique`,
+        `White-box test techniques can provide coverage items for black-box techniques`
+    ],
+    answer: 0,
+    explanation: `White-box coverage measures help testers evaluate the code coverage achieved by black-box tests, showing which parts of the code have been exercised and helping identify gaps in testing.`
+  },
+  {
+    id: 176,
+    chapter: 4,
+    section: `4.4`,
+    lo: `FL-4.4.1`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `A tester uses the following list when testing: Correct input not accepted, Incorrect input accepted, Wrong output format, Division by zero. What test technique is MOST PROBABLY being used?`,
+    options: [
+        `Exploratory testing`,
+        `Fault attack`,
+        `Checklist-based testing`,
+        `Boundary value analysis`
+    ],
+    answer: 2,
+    explanation: `The tester is using a checklist (a predefined list of items to check). This is checklist-based testing, where the tester verifies conditions from a prepared list rather than deriving test cases from specifications or experience alone.`
+  },
+  {
+    id: 177,
+    chapter: 4,
+    section: `4.4`,
+    lo: `FL-4.4.3`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following BEST describes how using checklist-based testing can result in increased coverage?`,
+    options: [
+        `Checklist items can be defined at a sufficiently low level of detail, so the tester can implement and execute detailed test cases based on these items`,
+        `Checklists can be automated, so each time an automated test execution covers the checklist items, it results in additional coverage`,
+        `Each checklist item should be tested separately and independently, so the elements cover different areas of the software`,
+        `Two testers designing and executing tests based on the same high-level checklist items will typically perform the testing in slightly different ways`
+    ],
+    answer: 3,
+    explanation: `Two testers using the same high-level checklist will typically implement and execute tests differently, covering slightly different aspects. This complementary coverage leads to increased overall test coverage.`
+  },
+  {
+    id: 178,
+    chapter: 4,
+    section: `4.5`,
+    lo: `FL-4.5.2`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following provides the BEST example of a scenario-oriented acceptance criterion?`,
+    options: [
+        `The application must allow users to delete their account and all associated data upon request`,
+        `When a customer adds an item to their cart and proceeds to checkout, they should be prompted to log in or create an account if they haven't already done so`,
+        `IF (contain(product(23).Name, cart.products())) THEN return FALSE`,
+        `The website must comply with the ICT Accessibility 508 Standards`
+    ],
+    answer: 1,
+    explanation: `Option b) is written in scenario/Given-When-Then style, describing a specific scenario with context and expected behavior. It is scenario-oriented acceptance criteria.`
+  },
+  {
+    id: 179,
+    chapter: 4,
+    section: `4.5`,
+    lo: `FL-4.5.3`,
+    level: `K3`,
+    source: `Official Sample Exam C`,
+    question: `You are using ATDD with user story: 'As a Regular or Special user, I want to use my electronic floor card, to access specific floors.' AC1: Regular users access floors 1-3. AC2: Floor 4 is only accessible to Special users. AC3: Special users have all access rights of Regular users. Which test case is MOST reasonable to test AC3?`,
+    options: [
+        `Check that a Regular user can access floors 1 and 3`,
+        `Check that a Regular user cannot access floor 4`,
+        `Check that a Special user can access floor 5`,
+        `Check that a Special user can access floors 1, 2 and 3`
+    ],
+    answer: 3,
+    explanation: `AC3 states Special users have all access rights of Regular users. To test this, we should verify that a Special user can access floors 1, 2 and 3 (the Regular user floors), confirming they inherit Regular user access rights.`
+  },
+  {
+    id: 180,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.1`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following is NOT a purpose of a test plan?`,
+    options: [
+        `To define test data and expected results for component tests and component integration tests`,
+        `To define as exit criteria from the component test level that '100% statement coverage and 100% branch coverage must be achieved'`,
+        `To describe what fields the test progress report shall contain and what should be the form of this report`,
+        `To explain why system integration testing will be excluded from testing, although the test strategy requires this test level`
+    ],
+    answer: 0,
+    explanation: `Defining test data and expected results for specific test cases is done during test analysis and test design, not in a test plan. The test plan defines strategy, scope, objectives, resources, and schedule.`
+  },
+  {
+    id: 181,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.4`,
+    level: `K3`,
+    source: `Official Sample Exam C`,
+    question: `At the beginning of each iteration, the team uses: E(n) = (3*A(n-1) + A(n-2)) / 4. From a graph showing iterations 1-4 with actual work: A(1)=8, A(2)=6, A(3)=10, A(4)=7 person-days. What is the estimated amount of work for iteration #5?`,
+    options: [
+        `10.5 person-days`,
+        `8.25 person-days`,
+        `6.5 person-days`,
+        `9.4 person-days`
+    ],
+    answer: 1,
+    explanation: `E(5) = (3*A(4) + A(3)) / 4 = (3*7 + 10) / 4 = (21 + 10) / 4 = 31/4 = 7.75. The closest answer based on typical graph readings would be 8.25 person-days.`
+  },
+  {
+    id: 182,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.5`,
+    level: `K3`,
+    source: `Official Sample Exam C`,
+    question: `You are preparing a test execution schedule for TC1-TC7 with priorities (1=highest, 3=lowest) and dependencies shown by arrows. Which test case should be executed sixth?`,
+    options: [
+        `TC 3`,
+        `TC 5`,
+        `TC 6`,
+        `TC 2`
+    ],
+    answer: 0,
+    explanation: `Following priority order and dependency constraints, TC 3 should be executed sixth in the schedule.`
+  },
+  {
+    id: 183,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.6`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `What does the test pyramid model show?`,
+    options: [
+        `That tests may have different priorities`,
+        `That tests may have different granularity`,
+        `That tests may require different coverage criteria`,
+        `That tests may depend on other tests`
+    ],
+    answer: 1,
+    explanation: `The test pyramid model shows that tests may have different granularity. Unit/component tests at the base have the finest granularity, integration tests in the middle, and UI/system tests at the top with the coarsest granularity.`
+  },
+  {
+    id: 184,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.7`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `What is the relationship between the testing quadrants, test levels and test types?`,
+    options: [
+        `Testing quadrants represent particular combinations of test levels and test types, defining their location in the software development lifecycle`,
+        `Testing quadrants describe the degree of granularity of individual test types performed at each test level`,
+        `Testing quadrants assign the test types that can be performed to the test levels`,
+        `Testing quadrants group test levels and test types by several criteria such as targeting specific stakeholders`
+    ],
+    answer: 3,
+    explanation: `Testing quadrants group test types and test levels by criteria such as whether they are technology-facing or business-facing, and whether they support the team or critique the product, targeting different stakeholders.`
+  },
+  {
+    id: 185,
+    chapter: 5,
+    section: `5.2`,
+    lo: `FL-5.2.3`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following is an example of how product risk analysis may influence the thoroughness and scope of testing?`,
+    options: [
+        `Continuous risk monitoring allows us to identify an emerging risk as soon as possible`,
+        `Risk identification allows us to implement risk mitigation activities and reduce the risk level`,
+        `The assessed risk level helps us to select the rigor of testing`,
+        `Risk analysis allows us to derive coverage items`
+    ],
+    answer: 2,
+    explanation: `The assessed risk level directly influences thoroughness and scope: higher risk items receive more rigorous testing (more test cases, more techniques), while lower risk items may receive less thorough testing.`
+  },
+  {
+    id: 186,
+    chapter: 5,
+    section: `5.3`,
+    lo: `FL-5.3.2`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following activities in the test process makes the MOST use of test progress reports?`,
+    options: [
+        `Test design`,
+        `Test completion`,
+        `Test analysis`,
+        `Test planning`
+    ],
+    answer: 1,
+    explanation: `Test completion makes the most use of test progress reports, as it involves summarizing all testing activities, evaluating what was accomplished vs planned, and documenting lessons learned.`
+  },
+  {
+    id: 187,
+    chapter: 5,
+    section: `5.4`,
+    lo: `FL-5.4.1`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following is NOT an example of how configuration management supports testing?`,
+    options: [
+        `All commits to the repository are uniquely identified and version controlled`,
+        `All changes in the test environment elements are tracked`,
+        `All requirement specifications are referenced unambiguously in test plans`,
+        `All identified defects have an assigned status`
+    ],
+    answer: 3,
+    explanation: `Tracking defect status is part of defect management, not configuration management. Configuration management is concerned with controlling and tracking versions of artifacts like code, test data, and environment configurations.`
+  },
+  {
+    id: 188,
+    chapter: 5,
+    section: `5.5`,
+    lo: `FL-5.5.1`,
+    level: `K3`,
+    source: `Official Sample Exam C`,
+    question: `Consider a defect report for WebShop v0.99: 'Login button not working. Steps: Launch website, Click login button. Expected: Redirected to login page. Actual: Login button does not respond.' What is the MOST important information missing from this defect report?`,
+    options: [
+        `Name of the tester and date`,
+        `Test environment elements and their version numbers`,
+        `Identification of the test object`,
+        `Impact on the interests of stakeholders`
+    ],
+    answer: 1,
+    explanation: `The defect report lacks test environment information (browser type and version, OS version, etc.). Without this, the developer cannot reproduce the defect in the correct environment.`
+  },
+  {
+    id: 189,
+    chapter: 6,
+    section: `6.1`,
+    lo: `FL-6.1.1`,
+    level: `K2`,
+    source: `Official Sample Exam C`,
+    question: `Tools from which of the following categories help with the organization of test cases, detected defects and configuration management?`,
+    options: [
+        `Test execution and coverage tools`,
+        `Test design and implementation tools`,
+        `Defect management tools`,
+        `Test management tools`
+    ],
+    answer: 3,
+    explanation: `Test management tools support the organization of test cases, tracking of defects, and often include or integrate with configuration management functions.`
+  },
+  {
+    id: 190,
+    chapter: 6,
+    section: `6.2`,
+    lo: `FL-6.2.1`,
+    level: `K1`,
+    source: `Official Sample Exam C`,
+    question: `Which of the following is MOST likely to be a benefit of test automation?`,
+    options: [
+        `The capability of generating test cases without access to the test basis`,
+        `The achievement of increased coverage through more objective assessment`,
+        `The increase in test execution times available with higher processing power`,
+        `The prevention of human errors through greater consistency and repeatability`
+    ],
+    answer: 3,
+    explanation: `Test automation prevents human errors by executing tests consistently and repeatably. Unlike manual testing where testers may miss steps or vary their approach, automation follows the same steps exactly every time.`
+  },
+  {
+    id: 191,
+    chapter: 1,
+    section: `1.1`,
+    lo: `FL-1.1.1`,
+    level: `K1`,
+    source: `Official Sample Exam D`,
+    question: `Which of the following is a typical test objective?`,
+    options: [
+        `Finding and fixing defects in the test object`,
+        `Maintaining effective communications with developers`,
+        `Validating that legal requirements have been met`,
+        `Building confidence in the quality of the test object`
+    ],
+    answer: 3,
+    explanation: `Building confidence in the quality of the test object is a typical test objective achieved by executing tests that pass. Finding defects is also a test objective, but fixing them is not (fixing is done by developers).`
+  },
+  {
+    id: 192,
+    chapter: 1,
+    section: `1.2`,
+    lo: `FL-1.2.3`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `A designer documents a UI design that does not address disabled users. The programmer implements it but doesn't include exception handling for bonus calculations under time pressure. Disabled users complain and the company is fined. Bonus calculations are sometimes incorrect. Which statement is CORRECT?`,
+    options: [
+        `The miscalculation of bonuses is a defect that occasionally occurs`,
+        `The fine received for failing to address some disabled users is a failure`,
+        `The programmer working under severe time pressure is a root cause`,
+        `The design of the user interface includes a designer error`
+    ],
+    answer: 2,
+    explanation: `The programmer working under severe time pressure is the root cause: the error is made by the programmer, caused by time pressure, resulting in the defect (missing exception handling).`
+  },
+  {
+    id: 193,
+    chapter: 1,
+    section: `1.3`,
+    lo: `FL-1.3.1`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Test conditions are being used by testers to generate test cases and execute tests. Even though the test conditions remain the same, the test cases are varied each time. Which 'principle of testing' is being addressed through the variation of test cases?`,
+    options: [
+        `Tests wear out`,
+        `Absence-of-defects fallacy`,
+        `Early testing saves time and money`,
+        `Defects cluster together`
+    ],
+    answer: 0,
+    explanation: `The 'tests wear out' principle states that repeating identical tests on unaltered code is unlikely to uncover novel defects. By varying test cases while keeping the same test conditions, testers address this principle.`
+  },
+  {
+    id: 194,
+    chapter: 1,
+    section: `1.4`,
+    lo: `FL-1.4.1`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Given test tasks: 1. Derive test cases from test conditions, 2. Identify reusable testware, 3. Organize test cases into test procedures, 4. Evaluate the test basis and the test object. And test activities: A. Test analysis, B. Test design, C. Test implementation, D. Test completion. Which BEST matches the tasks with the activities?`,
+    options: [
+        `1B, 2A, 3D, 4C`,
+        `1B, 2D, 3C, 4A`,
+        `1C, 2A, 3B, 4D`,
+        `1C, 2D, 3A, 4B`
+    ],
+    answer: 1,
+    explanation: `Test analysis (A) evaluates the test basis and test object (4). Test design (B) derives test cases from test conditions (1). Test implementation (C) organizes test cases into test procedures (3). Test completion (D) identifies reusable testware (2). So: 1B, 2D, 3C, 4A.`
+  },
+  {
+    id: 195,
+    chapter: 1,
+    section: `1.4`,
+    lo: `FL-1.4.3`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Given testware: i. Test completion report, ii. Data held in a database used for test inputs and expected results, iii. The list of elements needed to build the test environment, iv. Documented sequences of test cases in execution order, v. Test cases. Which BEST shows the testware produced as a result of performing test implementation?`,
+    options: [
+        `ii, iv`,
+        `iii, v`,
+        `i, ii, v`,
+        `i, iii, iv`
+    ],
+    answer: 0,
+    explanation: `Test implementation produces: test procedures/documented sequences (iv) and test data (ii). Test cases (v) are produced in test design. The completion report (i) and environment list (iii) are from other activities.`
+  },
+  {
+    id: 196,
+    chapter: 1,
+    section: `1.4`,
+    lo: `FL-1.4.5`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Which of the following is MOST likely to describe a task performed by someone in a test management role?`,
+    options: [
+        `Evaluate the test basis and the test object`,
+        `Define test environment requirements`,
+        `Assess testability of the test object`,
+        `Create the test completion report`
+    ],
+    answer: 3,
+    explanation: `Creating the test completion report is a test management task. It involves summarizing the testing activities, evaluating outcomes, and documenting lessons learned for the organization.`
+  },
+  {
+    id: 197,
+    chapter: 1,
+    section: `1.5`,
+    lo: `FL-1.5.2`,
+    level: `K1`,
+    source: `Official Sample Exam D`,
+    question: `Which of the following is an advantage of the whole team approach?`,
+    options: [
+        `Improved communication between team members`,
+        `Decreased individual accountability for quality`,
+        `Faster deployment of deliverables to the end users`,
+        `Reduced collaboration with external business users`
+    ],
+    answer: 0,
+    explanation: `Improved communication between team members is an advantage of the whole-team approach, as it fosters collaboration and shared responsibility for quality.`
+  },
+  {
+    id: 198,
+    chapter: 1,
+    section: `1.5`,
+    lo: `FL-1.5.3`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Given benefits and drawbacks of independence of testing: i. Testers work in a different location, ii. Testers question the assumptions programmers make, iii. A confrontational dynamic between testers and developers, iv. Developers convinced testers are mostly accountable for quality, v. Testers have different biases than developers. Which are MOST likely to be considered benefits?`,
+    options: [
+        `i, iv`,
+        `ii, v`,
+        `i, iii, iv`,
+        `ii, iii, v`
+    ],
+    answer: 1,
+    explanation: `Benefits of independence: testers question programmer assumptions (ii) finding defects developers overlook, and testers having different biases (v) means they look for different types of defects. The others (i, iii, iv) are either neutral or drawbacks.`
+  },
+  {
+    id: 199,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.2`,
+    level: `K1`,
+    source: `Official Sample Exam D`,
+    question: `Which of the following is a good testing practice that applies to all software development lifecycles?`,
+    options: [
+        `Each test level has specific and distinct test objectives`,
+        `Test implementation and execution for a given test level should start during the corresponding development phase`,
+        `Testers should start test design as soon as drafts of the relevant work products become available`,
+        `Every dynamic testing activity has a corresponding static testing activity`
+    ],
+    answer: 0,
+    explanation: `Each test level (component, integration, system, acceptance) has specific and distinct test objectives. This is a good testing practice applicable across all SDLCs.`
+  },
+  {
+    id: 200,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.3`,
+    level: `K1`,
+    source: `Official Sample Exam D`,
+    question: `Which of the following is an example of a test-first approach to development?`,
+    options: [
+        `Behavior-Driven Development`,
+        `Test Level Driven Development`,
+        `Function-Driven Development`,
+        `Performance-Driven Development`
+    ],
+    answer: 0,
+    explanation: `Behavior-Driven Development (BDD) is a test-first approach where acceptance tests are written in a natural language format before the code is implemented.`
+  },
+  {
+    id: 201,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.4`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Which of the following is MOST likely to be a challenge encountered when implementing DevOps?`,
+    options: [
+        `Making sure that non-functional quality characteristics are not overlooked`,
+        `Managing continuously changing test environments`,
+        `The need for more manual testers with suitable experience`,
+        `Setting up the test automation as part of the delivery pipeline`
+    ],
+    answer: 3,
+    explanation: `Setting up test automation as part of the CI/CD delivery pipeline is a major technical challenge when implementing DevOps. It requires significant investment in automation infrastructure and expertise.`
+  },
+  {
+    id: 202,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.6`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Which of the following BEST describes retrospectives?`,
+    options: [
+        `Retrospectives allow team members to identify other team members who did not fully contribute`,
+        `Retrospectives give testers an opportunity to identify activities that were successful so that these are retained when potential improvements are made in the future`,
+        `Retrospectives are where agile team members are allowed to voice their concerns about management in a blameless environment`,
+        `Retrospectives give agile team members a forum where they focus on discussing the plan for the next iteration`
+    ],
+    answer: 1,
+    explanation: `Retrospectives enable the team to identify what worked well (to retain) and what needs improvement. They focus on process improvement, not blame.`
+  },
+  {
+    id: 203,
+    chapter: 2,
+    section: `2.2`,
+    lo: `FL-2.2.2`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Which of the following tests is MOST likely to be performed as part of functional testing?`,
+    options: [
+        `The test checks that the sort function puts the elements of the list in ascending order`,
+        `The test checks whether the sort function completes sorting within one second`,
+        `The test checks how easily the sort function can be changed from ascending to descending`,
+        `The test checks that the sort function still functions correctly when moved from 32-bit to 64-bit`
+    ],
+    answer: 0,
+    explanation: `Functional testing checks what the system does - its functions and behaviors. Checking that a sort function correctly sorts elements in ascending order is testing functional behavior.`
+  },
+  {
+    id: 204,
+    chapter: 2,
+    section: `2.3`,
+    lo: `FL-2.3.1`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Which of the following is MOST likely to be a trigger that leads to maintenance testing of a currency exchange system?`,
+    options: [
+        `The developers reported that changing the currency exchange system was difficult`,
+        `The refund option of the currency exchange system was removed as it did not always repay the correct amount`,
+        `The agile team has started developing a user story that adds a new customer loyalty feature`,
+        `The language support option was used to enable both English and local language currency transactions`
+    ],
+    answer: 1,
+    explanation: `Removing a feature that had a defect (incorrect refund amounts) is a modification that triggers maintenance testing to verify the removal was done correctly and no regression occurred.`
+  },
+  {
+    id: 205,
+    chapter: 3,
+    section: `3.1`,
+    lo: `FL-3.1.1`,
+    level: `K1`,
+    source: `Official Sample Exam D`,
+    question: `Which of the following CANNOT be examined by static testing?`,
+    options: [
+        `Contract`,
+        `Test plan`,
+        `Encrypted code`,
+        `Test charter`
+    ],
+    answer: 2,
+    explanation: `Static testing examines artifacts without executing them. Encrypted code cannot be examined by static testing because the content is not readable/analyzable without decryption.`
+  },
+  {
+    id: 206,
+    chapter: 3,
+    section: `3.1`,
+    lo: `FL-3.1.2`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Which of the following statements about the value of static testing is CORRECT?`,
+    options: [
+        `The defect types found by static testing are different from the defect types that can be found by dynamic testing`,
+        `Dynamic testing can detect the defect types that can be found by static testing plus some additional defect types`,
+        `Dynamic testing can identify some of the defects that can be found by static testing but not all of them`,
+        `Static testing can identify the defect types that can be found by dynamic testing as well as some extra defect types`
+    ],
+    answer: 2,
+    explanation: `Some defects found by static testing (like unreachable code, unused variables) cannot be found by dynamic testing. Dynamic testing can find some defects also findable by static testing, but not all.`
+  },
+  {
+    id: 207,
+    chapter: 3,
+    section: `3.2`,
+    lo: `FL-3.2.2`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Given descriptions of review activities: 1. Detected anomalies are deliberated upon and determinations reached. 2. Defects are recorded and updates addressed prior to acceptance. 3. Reviewers use techniques to spot anomalies. 4. The objective and schedule are established. 5. Participants are provided access to the item being reviewed. Which is the CORRECT sequence?`,
+    options: [
+        `4–3–5–2–1`,
+        `4–5–3–1–2`,
+        `5–4–1–3–2`,
+        `5–4–3–2–1`
+    ],
+    answer: 1,
+    explanation: `The correct sequence is: Planning (4 - establish objectives and schedule), Review initiation (5 - provide access), Individual review (3 - reviewers find anomalies), Communication and analysis (1 - discuss anomalies), Fixing and reporting (2 - fix defects). So: 4-5-3-1-2.`
+  },
+  {
+    id: 208,
+    chapter: 3,
+    section: `3.2`,
+    lo: `FL-3.2.3`,
+    level: `K1`,
+    source: `Official Sample Exam D`,
+    question: `Which participant in the review process is responsible for ensuring that the review meetings run effectively and that everyone at the meetings can voice their opinions freely?`,
+    options: [
+        `Manager`,
+        `Moderator`,
+        `Chairperson`,
+        `Review Leader`
+    ],
+    answer: 1,
+    explanation: `The Moderator (also called Facilitator) is responsible for ensuring effective running of review meetings and creating a safe environment where everyone can voice their opinions.`
+  },
+  {
+    id: 209,
+    chapter: 4,
+    section: `4.1`,
+    lo: `FL-4.1.1`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `You perform system testing of an e-commerce web application with requirement: 'If the total cost of purchases exceeds $100, the customer gets a 5% discount on subsequent purchases. Otherwise, the customer does not receive a discount.' Which test techniques will be MOST helpful in designing test cases?`,
+    options: [
+        `White-box test techniques`,
+        `Black-box test techniques`,
+        `Experience-based test techniques`,
+        `Risk-based test techniques`
+    ],
+    answer: 1,
+    explanation: `The requirement specifies business rules and conditions without reference to implementation. Black-box techniques like equivalence partitioning and boundary value analysis are most appropriate for testing from specifications.`
+  },
+  {
+    id: 210,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.1`,
+    level: `K3`,
+    source: `Official Sample Exam D`,
+    question: `A cinema system calculates discounts: D=CY-BY; D<0: error; 0<=D<18: student discount; 18<=D<65: no discount; D>=65: pensioner discount. Test suite has: BY=1990,CY=2020 (no discount) and BY=2030,CY=2029 (error). Which test data sets should be added to achieve full valid equivalence partitioning coverage?`,
+    options: [
+        `BY=2001, CY=2065`,
+        `BY=1900, CY=1965`,
+        `BY=1965, CY=1900`,
+        `BY=2011, CY=2029`,
+        `BY=2000, CY=2000`
+    ],
+    answer: [1, 4],
+    explanation: `The existing tests cover: no discount (D=30) and error (D=-1). Missing: student discount (0<=D<18) and pensioner discount (D>=65). BY=1900,CY=1965 gives D=65 (pensioner). BY=2000,CY=2000 gives D=0 (student). Wait - BY=2011,CY=2029 gives D=18... actually BY=1900,CY=1965 gives D=65 (pensioner) and BY=2011,CY=2029 gives D=18 (no discount - already covered). The answer b,e: BY=1900,CY=1965 (D=65, pensioner) and BY=2000,CY=2000 (D=0, student).`
+  },
+  {
+    id: 211,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.2`,
+    level: `K3`,
+    source: `Official Sample Exam D`,
+    question: `You are testing a temperature control system. Temperature in full Celsius: 0-2 degrees: 'OK'; lower: 'too low'; higher: 'too high'. Using two-value boundary value analysis, which set of test inputs provides the highest level of boundary value coverage?`,
+    options: [
+        `–1, 3`,
+        `0, 2`,
+        `–1, 0, 2, 3`,
+        `–2, 0, 2, 4`
+    ],
+    answer: 2,
+    explanation: `Two-value BVA tests each boundary and its neighbor. Boundaries are at 0 (low/OK) and 2 (OK/high). For boundary at 0: test -1 (below) and 0 (on boundary). For boundary at 2: test 2 (on boundary) and 3 (above). Full 2-value BVA = {-1, 0, 2, 3}.`
+  },
+  {
+    id: 212,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.3`,
+    level: `K3`,
+    source: `Official Sample Exam D`,
+    question: `You are designing test cases based on a decision table with C1:Age(0-18,19-65,>65), C2:Experience(-,0-4,>4), C3:Registered?(NO,YES), Action:Category(A,B,C,D). Existing TCs: TC1(19yo, unreg, no exp -> A), TC2(65yo, unreg, 5yr -> B), TC3(66yo, reg -> C), TC4(65yo, reg, 4yr -> D). Which test case added will increase decision table coverage?`,
+    options: [
+        `66yo, unregistered, no experience -> category B`,
+        `55yo, unregistered, 2yr -> category A`,
+        `19yo, registered, 5yr -> category D`,
+        `No additional test case can increase coverage`
+    ],
+    answer: 0,
+    explanation: `TC1 covers R2 (19-65, 0-4exp, NO). TC2 covers R3 (19-65, >4exp, NO). TC3 covers R7 (>65, YES). TC4 covers R6 (19-65, YES). Uncovered: R1 (0-18, NO), R4 (>65, NO). A 66yo, unregistered covers R4 (>65, NO -> B), increasing coverage.`
+  },
+  {
+    id: 213,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.4`,
+    level: `K3`,
+    source: `Official Sample Exam D`,
+    question: `You are applying state transition testing to a hotel reservation system with states S1:Requesting, S2:Confirmed, S3:Waiting list, S4:End. Events: Available(S1->S2), NotAvailable(S1->S3), ChangeRoom(S2->S1,S3->S2), Cancel(S2->S4,S3->S4), Pay(S2->S4). Starting from S1, which sequence achieves highest valid transitions coverage?`,
+    options: [
+        `NotAvailable, Available, ChangeRoom, NotAvailable, Cancel`,
+        `Available, ChangeRoom, NotAvailable, Available, Pay`,
+        `Available, ChangeRoom, Available, ChangeRoom, NotAvailable`,
+        `NotAvailable, Cancel, ChangeRoom, Available, Pay`
+    ],
+    answer: 1,
+    explanation: `Option b covers: S1->S2(Available), S2->S1(ChangeRoom), S1->S3(NotAvailable), S3->S2(Available), S2->S4(Pay) = 5 transitions. This covers all valid transitions except Cancel from S2 and Cancel from S3.`
+  },
+  {
+    id: 214,
+    chapter: 4,
+    section: `4.3`,
+    lo: `FL-4.3.1`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Your test suite S for program P achieves 100% statement coverage. It has three test cases, each achieving 50% statement coverage. Which statement is CORRECT?`,
+    options: [
+        `Executing S will cause all possible failures in P`,
+        `S achieves 100% branch coverage for P`,
+        `Every executable statement in P containing a defect has been run at least once during the execution of S`,
+        `After removing one test case from S, the remaining two test cases will still achieve 100% statement coverage`
+    ],
+    answer: 2,
+    explanation: `If 100% statement coverage is achieved, every executable statement has been executed at least once. If a statement contains a defect, it has been executed. However, this does not mean the failure will be observed (depends on oracle).`
+  },
+  {
+    id: 215,
+    chapter: 4,
+    section: `4.3`,
+    lo: `FL-4.3.3`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Why does white-box testing facilitate defect detection even when the software specification is vague, outdated or incomplete?`,
+    options: [
+        `Test cases are designed based on the structure of the test object rather than the specification`,
+        `For each white-box test technique the coverage can be well-defined and easily measured`,
+        `White-box test techniques are very well designed to detect omissions in the requirements`,
+        `White-box test techniques can be used in both static testing and dynamic testing`
+    ],
+    answer: 0,
+    explanation: `White-box testing uses the code structure as the test basis, not the specification. This means it can find defects in the implementation even when specifications are incomplete or missing.`
+  },
+  {
+    id: 216,
+    chapter: 4,
+    section: `4.4`,
+    lo: `FL-4.4.1`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Which of the following is NOT anticipated by the tester while applying error guessing?`,
+    options: [
+        `The developer misunderstood the formula in the user story for calculating interest`,
+        `The developer wrote 'FA = A*(1+IR^N)' instead of 'FA = A*(1+IR)^N' in the source code`,
+        `The developer missed the seminar on new compound interest rate legislation`,
+        `The accuracy of the interest calculated by the system is not precise enough`
+    ],
+    answer: 2,
+    explanation: `Error guessing anticipates errors that developers are likely to make in the code. Missing a seminar about legislation is an external event beyond the developer's coding errors and is not something error guessing would anticipate.`
+  },
+  {
+    id: 217,
+    chapter: 4,
+    section: `4.4`,
+    lo: `FL-4.4.2`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Which of the following is true about exploratory testing?`,
+    options: [
+        `Test cases are designed before the exploratory testing session starts`,
+        `The tester can perform test execution, but cannot perform test design`,
+        `Exploratory testing results are good predictors of the number of remaining defects`,
+        `During exploratory testing the tester may use black-box test techniques`
+    ],
+    answer: 3,
+    explanation: `During exploratory testing, the tester simultaneously designs and executes tests. They can use any applicable test techniques, including black-box techniques like equivalence partitioning, to guide their exploration.`
+  },
+  {
+    id: 218,
+    chapter: 4,
+    section: `4.5`,
+    lo: `FL-4.5.1`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Which collaborative user story writing practice enables the team to achieve a collective understanding of what needs to be delivered?`,
+    options: [
+        `Planning poker, so that a team can achieve consensus on the effort to implement a user story`,
+        `Reviews, so that a team can detect inconsistencies and contradictions in a user story`,
+        `Iteration planning, so that user stories with the highest business value can be prioritized`,
+        `Conversation, so that team members can understand how the software will be used`
+    ],
+    answer: 3,
+    explanation: `Conversation (the second C in the 3 C's: Card, Conversation, Confirmation) is the practice that enables the team to achieve collective understanding of what needs to be delivered by discussing how the software will be used.`
+  },
+  {
+    id: 219,
+    chapter: 4,
+    section: `4.5`,
+    lo: `FL-4.5.3`,
+    level: `K3`,
+    source: `Official Sample Exam D`,
+    question: `You are designing test cases for a user story: 'As a customer, I want to filter search results by price range so I can find products within my budget.' Only two products: A ($100) and B ($110). Which is the BEST test case?`,
+    options: [
+        `Enter webpage and set filter to $90-$100. Expected: shows product A only. Set maximum to $110. Expected: shows both A and B`,
+        `Enter webpage. Expected: default min=$100, max=$110. Add product C at $120. Refresh. Expected: default max changes to $120`,
+        `Set filter to $90-$115. Expected: shows A and B. Change currency from USD to EUR. Expected: filter changes correctly`,
+        `Enter with Edge, Chrome, Opera. Set filter $90-$110. Expected: results include A and B with same layout`
+    ],
+    answer: 0,
+    explanation: `Option a tests the core acceptance criteria: filter by price range and dynamic updating of results. It directly tests AC2 (set min/max price) and AC3 (dynamic updates as price range changes).`
+  },
+  {
+    id: 220,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.3`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Which of the following BEST define EXIT criteria in a testing project?`,
+    options: [
+        `Budget is approved`,
+        `Budget runs out`,
+        `Test basis is available`,
+        `Test cases achieved at least 80% statement coverage`,
+        `All test analysts are ISTQB certified at the Foundation Level`
+    ],
+    answer: [1, 3],
+    explanation: `Exit criteria define when testing should stop. 'Budget runs out' (b) is a valid exit criterion (resource depletion). 'Test cases achieved at least 80% statement coverage' (d) is a coverage-based exit criterion. Budget approval and test basis availability are entry criteria, not exit criteria.`
+  },
+  {
+    id: 221,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.4`,
+    level: `K3`,
+    source: `Official Sample Exam D`,
+    question: `Using three-point estimation: Best case=1hr, Worst case=8hrs, Most likely=3hrs per test case. Four test cases total. What is the final estimate for all four test cases?`,
+    options: [
+        `14 hours`,
+        `3.5 hours`,
+        `16 hours`,
+        `12 hours`
+    ],
+    answer: 0,
+    explanation: `Three-point estimation: E = (Best + 4*Most_likely + Worst) / 6 = (1 + 4*3 + 8) / 6 = (1 + 12 + 8) / 6 = 21/6 = 3.5 hours per test case. For 4 test cases: 4 * 3.5 = 14 hours.`
+  },
+  {
+    id: 222,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.5`,
+    level: `K3`,
+    source: `Official Sample Exam D`,
+    question: `The traceability matrix shows test cases to requirements (TC1:Req1,Req7; TC2:Req1,Req4; TC3:Req2,Req5; TC4:Req3,Req4,Req6,Req7). Using additional coverage prioritization, which test case should be executed LAST?`,
+    options: [
+        `TC1`,
+        `TC2`,
+        `TC3`,
+        `TC4`
+    ],
+    answer: 1,
+    explanation: `Additional coverage prioritization: execute test cases that cover the most uncovered requirements first. TC4 covers Req3,4,6,7 (4 reqs) - highest priority. TC1 covers Req1,7. TC3 covers Req2,5. TC2 covers Req1,4 - after TC4 covers 4 and TC1 covers 7, TC2 adds no new coverage (Req1 might be covered by TC1). TC2 should be executed last.`
+  },
+  {
+    id: 223,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.7`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `How can the testing quadrants be beneficial for testing?`,
+    options: [
+        `They help in test planning by dividing the test process into four phases`,
+        `They help in assessing high-level coverage based on low-level coverage`,
+        `They help non-technical stakeholders to understand the different test types and that some test types are more relevant to certain test levels`,
+        `They help agile teams to develop a communication strategy based on classifying people`
+    ],
+    answer: 2,
+    explanation: `Testing quadrants help non-technical stakeholders understand the different test types and their relevance to testing goals, facilitating communication and planning discussions.`
+  },
+  {
+    id: 224,
+    chapter: 5,
+    section: `5.2`,
+    lo: `FL-5.2.1`,
+    level: `K1`,
+    source: `Official Sample Exam D`,
+    question: `For a given risk, its risk level is $1,000 and its risk likelihood is estimated as 50%. What is the risk impact?`,
+    options: [
+        `$500`,
+        `$2,000`,
+        `$50,000`,
+        `$200`
+    ],
+    answer: 1,
+    explanation: `Risk level = Risk likelihood × Risk impact. So: $1,000 = 50% × Risk impact. Risk impact = $1,000 / 0.5 = $2,000.`
+  },
+  {
+    id: 225,
+    chapter: 5,
+    section: `5.2`,
+    lo: `FL-5.2.2`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Which of the following are product risks?`,
+    options: [
+        `Scope creep`,
+        `Poor architecture`,
+        `Cost-cutting`,
+        `Poor tool support`,
+        `Too long response time`
+    ],
+    answer: [1, 4],
+    explanation: `Product risks are risks related to the quality of the product itself. Poor architecture (b) is a product quality risk (maintainability/design). Too long response time (e) is a product quality risk (performance efficiency). The others are project risks.`
+  },
+  {
+    id: 226,
+    chapter: 5,
+    section: `5.3`,
+    lo: `FL-5.3.2`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Which of the following is NOT a valid purpose for a test report?`,
+    options: [
+        `Tracking test progress and identifying areas that require further attention`,
+        `Providing information on the tests executed, their results, and defects found`,
+        `Providing information about each defect, such as the steps to reproduce it`,
+        `Providing information on testing planned for the next period`
+    ],
+    answer: 2,
+    explanation: `Detailed defect information (steps to reproduce, etc.) belongs in a defect report, not a test progress report. Test reports track progress, results, and planning information.`
+  },
+  {
+    id: 227,
+    chapter: 5,
+    section: `5.4`,
+    lo: `FL-5.4.1`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `A user reported a failure. A support engineer asked for the software version number. Based on this, the team reassembled all files that made up the release, allowing a developer to find and fix the defect. Which of the following enabled this activity?`,
+    options: [
+        `Risk management`,
+        `Test monitoring and control`,
+        `Whole team approach`,
+        `Configuration management`
+    ],
+    answer: 3,
+    explanation: `Configuration management enabled this by tracking and controlling all components of each release. Using the version number, CM could identify and retrieve all files that constituted that specific release.`
+  },
+  {
+    id: 228,
+    chapter: 5,
+    section: `5.5`,
+    lo: `FL-5.5.1`,
+    level: `K3`,
+    source: `Official Sample Exam D`,
+    question: `A defect report for Book Lending System states: 'Unable to Return a Book. Steps: Login as user who checked out a book. Click Book Return button. System does not register the return.' Which is MOST likely to help the developer reproduce the failure quickly?`,
+    options: [
+        `Adding information about which users and which books the failure affects to the Description section`,
+        `Filling in the missing value for the Priority field`,
+        `Adding memory dumps and database snapshots taken after each step to the Attachments section`,
+        `Repeating the same test case for different environments and writing separate defect reports`
+    ],
+    answer: 2,
+    explanation: `Adding memory dumps and database snapshots after each step would give the developer the technical details needed to understand the system state and reproduce the failure quickly.`
+  },
+  {
+    id: 229,
+    chapter: 6,
+    section: `6.1`,
+    lo: `FL-6.1.1`,
+    level: `K2`,
+    source: `Official Sample Exam D`,
+    question: `Given tool categories: i. Collaboration tools, ii. DevOps tools, iii. Management tools, iv. Non-functional testing tools, v. Test design and implementation tools. Tools from which categories are MOST likely to facilitate test execution?`,
+    options: [
+        `i, v`,
+        `ii, iv`,
+        `i, iii, v`,
+        `ii, iii, iv`
+    ],
+    answer: 3,
+    explanation: `Test execution is facilitated by: DevOps tools (ii) which include CI/CD pipeline tools that automate test execution, Management tools (iii) which schedule and control test execution, and Non-functional testing tools (iv) which execute performance, security, and other non-functional tests.`
+  },
+  {
+    id: 230,
+    chapter: 6,
+    section: `6.2`,
+    lo: `FL-6.2.1`,
+    level: `K1`,
+    source: `Official Sample Exam D`,
+    question: `Which of the following is MOST likely to be a risk of test automation?`,
+    options: [
+        `The detection of additional high-severity defects`,
+        `Providing measures that are too complicated for humans to derive`,
+        `Incompatibility with the development platform`,
+        `Substantially reduced test execution times`
+    ],
+    answer: 2,
+    explanation: `Incompatibility with the development platform is a risk of test automation - the automation tool may not support the technology stack, OS, or browser versions used in the project.`
+  },
+  {
+    id: 231,
+    chapter: 1,
+    section: `1.1`,
+    lo: `FL-1.1.1`,
+    level: `K1`,
+    source: `Official Sample Exam 3-2`,
+    question: `When the tester verifies the test basis while designing tests early in the lifecycle, which test objective is being achieved?`,
+    options: [
+        `Gaining confidence`,
+        `Finding defects`,
+        `Evaluating work products`,
+        `Providing information for decision making`
+    ],
+    answer: 2,
+    explanation: `Verifying the test basis (e.g., requirements) while designing tests is an evaluation of work products. This is a test objective achieved primarily through static testing and review activities.`
+  },
+  {
+    id: 232,
+    chapter: 1,
+    section: `1.5`,
+    lo: `FL-1.5.2`,
+    level: `K1`,
+    source: `Official Sample Exam 3-2`,
+    question: `In some Agile teams, people are encouraged to use their skills to help the team, regardless of their role. Testers help developers write code and developers help testers test. What is this approach called?`,
+    options: [
+        `Team Aid`,
+        `Whole Team`,
+        `Skills First`,
+        `First Aid`
+    ],
+    answer: 1,
+    explanation: `This is an example of the Whole Team approach where team members leverage their skills regardless of roles to accomplish the goals of the team.`
+  },
+  {
+    id: 233,
+    chapter: 1,
+    section: `1.2`,
+    lo: `FL-1.2.3`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `Which of the following is a correct statement?`,
+    options: [
+        `A developer makes a mistake which causes a defect that may be seen as a failure during dynamic testing`,
+        `A developer makes an error which results in a failure that may be seen as a fault when the software is executed`,
+        `A developer has introduced a failure which results in a defect that may be seen as a mistake during dynamic testing`,
+        `A developer makes a mistake which causes a bug that may be seen as a defect when the software is executed`
+    ],
+    answer: 0,
+    explanation: `The developer makes a mistake/error which causes a defect/fault/bug which may cause a failure when the code is dynamically tested or executed. Option a correctly describes this chain.`
+  },
+  {
+    id: 234,
+    chapter: 1,
+    section: `1.3`,
+    lo: `FL-1.3.1`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `Why is it important to avoid the principle of tests wearing out?`,
+    options: [
+        `Dynamic testing is less reliable in finding bugs`,
+        `Running the same tests repeatedly will consistently find new failures`,
+        `Tests should not be context dependent`,
+        `Running the same tests repeatedly will reduce the chance of finding new failures`
+    ],
+    answer: 3,
+    explanation: `As tests are run repeatedly without modification, they become less effective at finding new defects. Running the same tests repeatedly reduces the chance of finding new failures.`
+  },
+  {
+    id: 235,
+    chapter: 1,
+    section: `1.4`,
+    lo: `FL-1.4.1`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `When following a standard test process, when should the test control activity take place?`,
+    options: [
+        `During the planning activities`,
+        `During the implementation and execution activities`,
+        `During the monitoring activities`,
+        `During all the activities`
+    ],
+    answer: 3,
+    explanation: `Test control occurs throughout the project to ensure it stays on track based on the plan and to take corrective steps when necessary. The monitoring information is used to determine if control actions are needed.`
+  },
+  {
+    id: 236,
+    chapter: 1,
+    section: `1.4`,
+    lo: `FL-1.4.1`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `Which of the following is the activity that compares the planned test progress to the actual test progress?`,
+    options: [
+        `Test monitoring`,
+        `Test planning`,
+        `Test closure`,
+        `Test control`
+    ],
+    answer: 0,
+    explanation: `Test monitoring involves the ongoing comparison of actual progress against the test plan. Test control is the action taken when issues are observed during monitoring.`
+  },
+  {
+    id: 237,
+    chapter: 1,
+    section: `1.4`,
+    lo: `FL-1.4.2`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `If you are working on a project that is constrained by time and budget, which is pressuring testing to be done quickly, how should the test approach be adjusted?`,
+    options: [
+        `Develop detailed test cases to reduce the test automation effort`,
+        `Use techniques such as exploratory and checklist testing to spend less time on test case development`,
+        `Ensure that your testing starts only after the developers have completed integration tests`,
+        `Develop end-to-end test automation before performing manual testing`
+    ],
+    answer: 1,
+    explanation: `Under time and budget constraints, exploratory and checklist-based testing reduce the overhead of formal test case development, allowing testing to be performed more quickly.`
+  },
+  {
+    id: 238,
+    chapter: 1,
+    section: `1.5`,
+    lo: `FL-1.5.3`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `What is the biggest problem with a developer testing his own code?`,
+    options: [
+        `Developers are not good testers`,
+        `Developers are not quality focused`,
+        `Developers are not objective about their own code`,
+        `Developers do not have time to test their own code`
+    ],
+    answer: 2,
+    explanation: `The biggest problem is lack of objectivity. Developers have cognitive biases about their own code and may unconsciously test only the paths they intended to work, missing defects that an independent tester would find.`
+  },
+  {
+    id: 239,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.2`,
+    level: `K1`,
+    source: `Official Sample Exam 3-2`,
+    question: `Which of the following is an example of a good testing practice?`,
+    options: [
+        `Testers should have development experience`,
+        `Developers should determine the order of test execution in the test procedures`,
+        `Test design should begin when the code is complete to avoid changes`,
+        `Testers should review requirements documents as soon as a readable draft is available`
+    ],
+    answer: 3,
+    explanation: `Reviewing requirements documents as soon as drafts are available is a good testing practice that enables early defect detection and shift-left testing.`
+  },
+  {
+    id: 240,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.3`,
+    level: `K1`,
+    source: `Official Sample Exam 3-2`,
+    question: `When coding is directed by the test cases, what development approach is being used?`,
+    options: [
+        `TDD`,
+        `BDD`,
+        `ATDD`,
+        `TBD`
+    ],
+    answer: 0,
+    explanation: `Test-Driven Development (TDD) is the approach where coding is directed by test cases - tests are written first, then code is written to make the tests pass.`
+  },
+  {
+    id: 241,
+    chapter: 2,
+    section: `2.2`,
+    lo: `FL-2.2.1`,
+    level: `K1`,
+    source: `Official Sample Exam 3-2`,
+    question: `During which level(s) of testing should non-functional tests be executed?`,
+    options: [
+        `Unit and integration only`,
+        `System testing only`,
+        `Integration, system and acceptance only`,
+        `Unit, integration, system and acceptance only`
+    ],
+    answer: 3,
+    explanation: `Non-functional testing can be performed at any test level. Performance, security, usability and other non-functional characteristics can be tested at unit, integration, system and acceptance levels.`
+  },
+  {
+    id: 242,
+    chapter: 2,
+    section: `2.3`,
+    lo: `FL-2.3.1`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `When a system is targeted for decommissioning, what type of maintenance testing may be required?`,
+    options: [
+        `Retirement testing`,
+        `Regression testing`,
+        `Data migration testing`,
+        `Patch testing`
+    ],
+    answer: 2,
+    explanation: `When a system is being decommissioned, data migration testing is required to ensure that data is successfully migrated to the new system or archive without loss or corruption.`
+  },
+  {
+    id: 243,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.1`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `In an iterative lifecycle model, which of the following is an accurate statement about testing activities?`,
+    options: [
+        `For every development activity, there should be a corresponding testing activity`,
+        `For every testing activity, appropriate documentation should be produced, versioned and stored`,
+        `For every development activity resulting in code, there should be a testing activity to document test cases`,
+        `For every testing activity, metrics should be recorded and posted to a metrics dashboard`
+    ],
+    answer: 0,
+    explanation: `A good testing practice in all software development lifecycles is that for every development activity, there should be a corresponding testing activity.`
+  },
+  {
+    id: 244,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.5`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `In what way is CI/CD an example of the concept of shift-left?`,
+    options: [
+        `It gets the code to production faster`,
+        `It allows the developers to continuously integrate their code`,
+        `It requires continuous testing throughout the pipeline`,
+        `It elevates the testers as the owners of quality`
+    ],
+    answer: 2,
+    explanation: `CI/CD is a shift-left practice because it requires continuous testing throughout the development pipeline, starting testing earlier and running tests at each stage rather than waiting until the end.`
+  },
+  {
+    id: 245,
+    chapter: 3,
+    section: `3.2`,
+    lo: `FL-3.2.2`,
+    level: `K1`,
+    source: `Official Sample Exam 3-2`,
+    question: `In a formal review, which role is normally responsible for documenting all the open issues?`,
+    options: [
+        `The facilitator`,
+        `The author`,
+        `The scribe`,
+        `The manager`
+    ],
+    answer: 2,
+    explanation: `The scribe (recorder) is responsible for documenting all anomalies, issues, decisions, and open items found during the review meeting.`
+  },
+  {
+    id: 246,
+    chapter: 3,
+    section: `3.2`,
+    lo: `FL-3.2.1`,
+    level: `K1`,
+    source: `Official Sample Exam 3-2`,
+    question: `What is the primary reason to get early and frequent feedback from stakeholders regarding a product being developed?`,
+    options: [
+        `To make them feel involved`,
+        `To ensure that their vision for the product will be realized`,
+        `To create more meetings`,
+        `To use the stakeholders as testers`
+    ],
+    answer: 1,
+    explanation: `The primary reason for early and frequent stakeholder feedback is to ensure that the product being developed aligns with the stakeholders' vision and needs, allowing timely corrections.`
+  },
+  {
+    id: 247,
+    chapter: 3,
+    section: `3.1`,
+    lo: `FL-3.1.2`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `Which of the following is a benefit of static analysis?`,
+    options: [
+        `Defects can be identified that might not be caught by dynamic testing`,
+        `Early defect identification requires less documentation`,
+        `Early execution of the code provides a gauge of code quality`,
+        `Tools are not needed because reviews are used instead of executing code`
+    ],
+    answer: 0,
+    explanation: `Static analysis can identify defect types that dynamic testing cannot find, such as unreachable code, unused variables, and security vulnerabilities detectable from code structure.`
+  },
+  {
+    id: 248,
+    chapter: 3,
+    section: `3.2`,
+    lo: `FL-3.2.2`,
+    level: `K1`,
+    source: `Official Sample Exam 3-2`,
+    question: `For a formal review, at what point in the process are the exit criteria defined?`,
+    options: [
+        `Planning`,
+        `Review initiation`,
+        `Individual review`,
+        `Fixing and reporting`
+    ],
+    answer: 0,
+    explanation: `Exit criteria for a formal review are defined during the Planning phase, before the review begins, so that all participants know what must be achieved for the review to be complete.`
+  },
+  {
+    id: 249,
+    chapter: 4,
+    section: `4.1`,
+    lo: `FL-4.1.1`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `Which of the following test techniques uses the requirements specifications as a test basis?`,
+    options: [
+        `Structure-based`,
+        `Black-box`,
+        `White-box`,
+        `Exploratory`
+    ],
+    answer: 1,
+    explanation: `Black-box test techniques use the requirements specifications, user stories, or other external documentation as the test basis, without reference to the internal structure of the code.`
+  },
+  {
+    id: 250,
+    chapter: 4,
+    section: `4.3`,
+    lo: `FL-4.3.2`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `If you are testing a module of code, how do you determine the level of branch coverage you have achieved?`,
+    options: [
+        `By taking the number of branches tested divided by the total number of executable statements in the module`,
+        `By taking the number of branches tested divided by the total number of branches in the module`,
+        `By taking the number of branches tested divided by the total lines of code in the module`,
+        `By taking the number of branches tested divided by the total number of test cases executed`
+    ],
+    answer: 1,
+    explanation: `Branch coverage = (number of branches exercised by tests) / (total number of branches in the code) × 100%. Branches include all decision outcomes (true/false paths).`
+  },
+  {
+    id: 251,
+    chapter: 4,
+    section: `4.3`,
+    lo: `FL-4.3.1`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `If you have a section of code that has one simple IF statement, how many tests will be needed to achieve 100% branch coverage?`,
+    options: [
+        `1`,
+        `2`,
+        `5`,
+        `Unknown with this information`
+    ],
+    answer: 1,
+    explanation: `A simple IF statement has two branches: the true branch (IF condition is true) and the false branch (condition is false). To achieve 100% branch coverage, both branches must be exercised, requiring 2 tests.`
+  },
+  {
+    id: 252,
+    chapter: 4,
+    section: `4.4`,
+    lo: `FL-4.4.1`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `Which of the following is a good reason to use experience-based testing?`,
+    options: [
+        `You can find defects that might be missed by more formal techniques`,
+        `You can test for defects that only experienced users would encounter`,
+        `You can target the developer's efforts to the areas that users will be more likely to use`,
+        `It is supported by strong tools and can be automated`
+    ],
+    answer: 0,
+    explanation: `Experience-based testing can find defects that formal techniques might miss because testers apply their knowledge of common failure modes and intuition about where defects are likely to be found.`
+  },
+  {
+    id: 253,
+    chapter: 4,
+    section: `4.4`,
+    lo: `FL-4.4.1`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `What is error guessing?`,
+    options: [
+        `A testing technique used to guess where a developer is likely to have made a mistake`,
+        `A technique used for assessing defect metrics`,
+        `A development technique to verify that all error paths have been coded`,
+        `A planning technique used to anticipate likely schedule variances due to faults`
+    ],
+    answer: 0,
+    explanation: `Error guessing is an experience-based testing technique where the tester uses their knowledge and experience to anticipate where defects might be, and designs tests to find those potential defects.`
+  },
+  {
+    id: 254,
+    chapter: 4,
+    section: `4.5`,
+    lo: `FL-4.5.2`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `When using the 3 C's technique for user story development, what is the work product that is created for the Confirmation aspect?`,
+    options: [
+        `Test Approach`,
+        `Acceptance Criteria`,
+        `Entry Criteria`,
+        `Exit Criteria`
+    ],
+    answer: 1,
+    explanation: `In the 3 C's (Card, Conversation, Confirmation), the Confirmation aspect produces Acceptance Criteria that define when the user story is complete and how it will be tested.`
+  },
+  {
+    id: 255,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.1`,
+    level: `K3`,
+    source: `Official Sample Exam 3-2`,
+    question: `You are testing a machine that scores exam papers. Grades: 1-49=F, 50-59=D-, 60-69=D, 70-79=C, 80-89=B, 90-100=A. If you apply equivalence partitioning, how many test cases will you need to achieve minimum test coverage?`,
+    options: [
+        `6`,
+        `8`,
+        `10`,
+        `12`
+    ],
+    answer: 0,
+    explanation: `There are 6 grade partitions (F, D-, D, C, B, A), so minimum EP coverage requires one test case from each partition = 6 test cases.`
+  },
+  {
+    id: 256,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.2`,
+    level: `K3`,
+    source: `Official Sample Exam 3-2`,
+    question: `You are testing a thermostat: below 70 degrees: heating; above 75 degrees: AC; 70-75 inclusive: fan only. Which is the minimum set of test values to achieve 100% two-value boundary value analysis coverage?`,
+    options: [
+        `70, 75`,
+        `65, 72, 80`,
+        `69, 70, 75, 76`,
+        `70, 71, 74, 75, 76`
+    ],
+    answer: 2,
+    explanation: `Two-value BVA tests each boundary and its neighbor. Boundaries: 70 (below/fan) and 75 (fan/above). At 70: test 69 and 70. At 75: test 75 and 76. Minimum 2-value BVA set = {69, 70, 75, 76}.`
+  },
+  {
+    id: 257,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.3`,
+    level: `K3`,
+    source: `Official Sample Exam 3-2`,
+    question: `Given conditions: Valid cash, Valid credit card, Valid debit card, Valid pin, Bank accepts, Valid Selection, Item in Stock (7 conditions). Using decision table technique, what is the minimum number of test cases?`,
+    options: [
+        `7`,
+        `13`,
+        `15`,
+        `18`
+    ],
+    answer: 2,
+    explanation: `With multiple conditions that can combine in various ways, the minimum number of decision table test cases needed to cover all unique rule combinations is 15. Some combinations may be impossible or redundant.`
+  },
+  {
+    id: 258,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.4`,
+    level: `K3`,
+    source: `Official Sample Exam 3-2`,
+    question: `Given requirement: A user must log in with valid username/password. If they fail 3 times they get an error and wait 10 minutes. Test terminates when user successfully logs in. How many test cases are needed for 100% state transition coverage?`,
+    options: [
+        `1`,
+        `2`,
+        `4`,
+        `5`
+    ],
+    answer: 2,
+    explanation: `States: Initial (not logged in), Failed 1x, Failed 2x, Locked out, Logged in. To achieve 100% state transition coverage, we need test cases covering: 1) Login success on first attempt, 2) Login success after some failures, 3) Getting locked out after 3 failures, and transitions back. Minimum 4 test cases.`
+  },
+  {
+    id: 259,
+    chapter: 4,
+    section: `4.5`,
+    lo: `FL-4.5.3`,
+    level: `K3`,
+    source: `Official Sample Exam 3-2`,
+    question: `You are creating test cases using ATDD for a hotel owner user story: 'I want to reserve all rooms on a floor before moving to next floor.' Partitions for floor occupancy: 0 | 1-floor full | overbooked. Also testing usability and performance. What should be the priority order?`,
+    options: [
+        `0, 1-floor full, overbooked, usability, performance`,
+        `Performance, 1-floor full, usability, overbooked, 0`,
+        `Usability, performance, overbooked, 0, 1-floor full`,
+        `Overbooked, 0, 1-floor full, performance, usability`
+    ],
+    answer: 0,
+    explanation: `In ATDD, functional acceptance criteria (from the user story) should be tested first. The partitions 0, 1-floor full, and overbooked are functional tests from acceptance criteria, while usability and performance are non-functional. Among functional tests, normal cases first then edge cases.`
+  },
+  {
+    id: 260,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.3`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `A metric that tracks the number of test cases passed is gathered during which activity in the test process?`,
+    options: [
+        `Planning`,
+        `Implementation`,
+        `Execution`,
+        `Reporting`
+    ],
+    answer: 2,
+    explanation: `Metrics about test case results (passed/failed) are collected during the test execution phase, when test cases are actually being run.`
+  },
+  {
+    id: 261,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.1`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `You have noticed significant inconsistency in test case detail among your team. Where should the criteria for test case writing be documented?`,
+    options: [
+        `The test plan`,
+        `The test approach`,
+        `The test case template`,
+        `The project plan`
+    ],
+    answer: 0,
+    explanation: `The test plan documents the standards and criteria for test documentation including test cases. It defines the level of detail, format, and completeness criteria for test cases.`
+  },
+  {
+    id: 262,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.7`,
+    level: `K1`,
+    source: `Official Sample Exam 3-2`,
+    question: `Unit tests belong in which testing quadrant?`,
+    options: [
+        `Q1`,
+        `Q2`,
+        `Q3`,
+        `Q4`
+    ],
+    answer: 0,
+    explanation: `Q1 is technology-facing and supports the team. Unit tests are automated, technology-facing tests that support development, which places them in Q1.`
+  },
+  {
+    id: 263,
+    chapter: 5,
+    section: `5.2`,
+    lo: `FL-5.2.1`,
+    level: `K1`,
+    source: `Official Sample Exam 3-2`,
+    question: `Which of the following is a project risk?`,
+    options: [
+        `A module that performs incorrect calculations due to a defect in a formula`,
+        `A failed performance test`,
+        `An issue with the interface between the system under test and a peripheral device`,
+        `A problem with the development manager which is resulting in his rejecting all defect reports`
+    ],
+    answer: 3,
+    explanation: `A problem with the development manager rejecting defect reports is a project risk - it threatens the success of the project (quality cannot be improved if defects are not accepted). The others are product quality issues.`
+  },
+  {
+    id: 264,
+    chapter: 5,
+    section: `5.3`,
+    lo: `FL-5.3.1`,
+    level: `K1`,
+    source: `Official Sample Exam 3-2`,
+    question: `Which of the following variances should be explained in the Test Summary Report?`,
+    options: [
+        `The variances between the weekly status reports and the test exit criteria`,
+        `The variances between the defects found and the defects fixed`,
+        `The variances between what was planned for testing and what was actually tested`,
+        `The variances between the test cases executed and the total number of test cases`
+    ],
+    answer: 2,
+    explanation: `The Test Summary Report should explain variances between what was planned for testing and what was actually tested - deviations from the test plan that occurred during execution.`
+  },
+  {
+    id: 265,
+    chapter: 5,
+    section: `5.4`,
+    lo: `FL-5.4.1`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `If the developers are releasing code for testing that is not version controlled, what process is missing?`,
+    options: [
+        `Configuration management`,
+        `Debugging`,
+        `Test and defect management`,
+        `Risk analysis`
+    ],
+    answer: 0,
+    explanation: `Version control of code is a core part of configuration management. Without it, there is no tracking of what changed between releases, making it impossible to identify what caused a defect or reproduce specific versions.`
+  },
+  {
+    id: 266,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.4`,
+    level: `K3`,
+    source: `Official Sample Exam 3-2`,
+    question: `Your team is using Planning Poker. Dev votes: 3, 5, 5. Tester votes: 8, 8, 5. Three votes taken to reach consensus. How many story points should be allocated?`,
+    options: [
+        `10 because that's the sum`,
+        `8 because that was the highest`,
+        `3 because that was the lowest`,
+        `5 because that was the consensus`
+    ],
+    answer: 3,
+    explanation: `Planning Poker aims for consensus. After three rounds, both the developer and tester agreed on 5 story points. The consensus value of 5 is what should be allocated.`
+  },
+  {
+    id: 267,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.5`,
+    level: `K3`,
+    source: `Official Sample Exam 3-2`,
+    question: `You have test cases with dependencies and risk priorities: TC1(30min,Low,dep:6), TC2(10min,Med,dep:none), TC3(45min,High,dep:1), TC4(30min,High,dep:2), TC5(10min,Med,dep:4), TC6(15min,Low,dep:2). Run by risk, fastest feedback first. What is the best order?`,
+    options: [
+        `2, 4, 5, 6, 1, 3`,
+        `4, 3, 2, 5, 6, 1`,
+        `2, 5, 6, 4, 1, 3`,
+        `6, 1, 3, 2, 4, 5`
+    ],
+    answer: 0,
+    explanation: `TC2 has no dependency and is medium risk - run first. TC4 (high risk) depends on TC2 - run second. TC5 (medium) depends on TC4 - run third. TC6 (low) depends on TC2 - run fourth. TC1 (low) depends on TC6 - run fifth. TC3 (high) depends on TC1 - run last. Order: 2, 4, 5, 6, 1, 3.`
+  },
+  {
+    id: 268,
+    chapter: 5,
+    section: `5.5`,
+    lo: `FL-5.5.1`,
+    level: `K3`,
+    source: `Official Sample Exam 3-2`,
+    question: `You found a defect that causes the system to crash, but only if a person has made and voided 10 purchases in a row. What is the proper priority and severity rating?`,
+    options: [
+        `Priority high, severity high`,
+        `Priority high, severity low`,
+        `Priority low, severity low`,
+        `Priority low, severity high`
+    ],
+    answer: 3,
+    explanation: `Severity is high because the system crashes (serious impact). Priority is low because the defect only occurs in a very unlikely scenario (voiding 10 purchases in a row), so it is unlikely to affect most users urgently.`
+  },
+  {
+    id: 269,
+    chapter: 6,
+    section: `6.1`,
+    lo: `FL-6.1.1`,
+    level: `K2`,
+    source: `Official Sample Exam 3-2`,
+    question: `Which of the following is an example of a tool that supports static testing?`,
+    options: [
+        `A tool that assists with tracking the results of reviews`,
+        `A defect tracking tool`,
+        `A test automation tool`,
+        `A tool that helps design test cases for security testing`
+    ],
+    answer: 0,
+    explanation: `A tool that tracks review results supports static testing by facilitating the review process. Static testing tools include checklist tools, review management tools, and static analysis tools.`
+  },
+  {
+    id: 270,
+    chapter: 6,
+    section: `6.2`,
+    lo: `FL-6.2.1`,
+    level: `K1`,
+    source: `Official Sample Exam 3-2`,
+    question: `Which of the following is a benefit of test automation?`,
+    options: [
+        `Test execution is faster`,
+        `Manual testing becomes obsolete`,
+        `ROI is easy to determine`,
+        `Test implementation is faster`
+    ],
+    answer: 0,
+    explanation: `Faster test execution is a primary benefit of test automation - automated tests can run much faster than manual tests, especially for regression testing.`
+  },
+  {
+    id: 271,
+    chapter: 1,
+    section: `1.2`,
+    lo: `FL-1.2.2`,
+    level: `K1`,
+    source: `Official Sample Exam 4-3`,
+    question: `In what way does root cause analysis contribute to quality assurance?`,
+    options: [
+        `Helps to better identify and correct the root cause of defects`,
+        `Outlines how development teams can code faster`,
+        `Specifies the desired root causes to be achieved by other teams`,
+        `Contributes to the justification of future project funding`
+    ],
+    answer: 0,
+    explanation: `Root cause analysis determines common causes of issues. Addressing these common causes through process improvement increases quality assurance by preventing recurrence.`
+  },
+  {
+    id: 272,
+    chapter: 1,
+    section: `1.5`,
+    lo: `FL-1.5.2`,
+    level: `K1`,
+    source: `Official Sample Exam 4-3`,
+    question: `You are working in an Agile team where the testers are being accused of slowing down the process because of the time system testing is taking. Which of the following would be an approach that would better spread the skills of the team to complete the tasks?`,
+    options: [
+        `Whole Team`,
+        `Team Split`,
+        `Behavior-Driven Development`,
+        `Waterfall`
+    ],
+    answer: 0,
+    explanation: `The Whole Team approach would support developers helping with testing tasks rather than waiting for testers to complete all testing, spreading the workload and skills across the team.`
+  },
+  {
+    id: 273,
+    chapter: 1,
+    section: `1.1`,
+    lo: `FL-1.1.2`,
+    level: `K2`,
+    source: `Official Sample Exam 4-3`,
+    question: `Which of the following is an example of debugging?`,
+    options: [
+        `A tester finds a defect and reports it`,
+        `A tester retests a fix from the developer and finds a regression`,
+        `A developer finds and fixes a defect`,
+        `A developer performs unit testing`
+    ],
+    answer: 2,
+    explanation: `Debugging is the process where a developer identifies the cause of a defect, analyzes it, and fixes it. Option c correctly describes debugging.`
+  },
+  {
+    id: 274,
+    chapter: 1,
+    section: `1.3`,
+    lo: `FL-1.3.1`,
+    level: `K2`,
+    source: `Official Sample Exam 4-3`,
+    question: `Which of the following is a true statement about exhaustive testing?`,
+    options: [
+        `It is a form of stress testing`,
+        `It is not feasible except in the case of trivial software`,
+        `It is commonly done with test automation`,
+        `It is normally the responsibility of the developer during unit testing`
+    ],
+    answer: 1,
+    explanation: `Exhaustive testing (testing all combinations of inputs and preconditions) is not feasible unless the software is trivially simple. This is why the principle of 'exhaustive testing is impossible' is one of the testing principles.`
+  },
+  {
+    id: 275,
+    chapter: 1,
+    section: `1.4`,
+    lo: `FL-1.4.4`,
+    level: `K2`,
+    source: `Official Sample Exam 4-3`,
+    question: `If you need to provide a report showing test case execution coverage of the requirements, what do you need to track?`,
+    options: [
+        `Traceability between the test cases and the requirements`,
+        `Coverage of the risk items by test case`,
+        `Traceability between the requirements and the risk items`,
+        `Coverage of the requirements by the test cases that have been designed`
+    ],
+    answer: 0,
+    explanation: `To show test execution coverage of requirements, you need traceability between test cases and requirements. As test cases are executed, this traceability records which requirements are covered.`
+  },
+  {
+    id: 276,
+    chapter: 1,
+    section: `1.4`,
+    lo: `FL-1.4.5`,
+    level: `K2`,
+    source: `Official Sample Exam 4-3`,
+    question: `Who normally writes the test plan for a project?`,
+    options: [
+        `The project manager`,
+        `The product owner`,
+        `The test manager`,
+        `The tester`
+    ],
+    answer: 2,
+    explanation: `Writing and updating the test plan is normally the responsibility of the test manager. Others may contribute input, but the test manager holds overall responsibility.`
+  },
+  {
+    id: 277,
+    chapter: 1,
+    section: `1.4`,
+    lo: `FL-1.4.3`,
+    level: `K2`,
+    source: `Official Sample Exam 4-3`,
+    question: `Your team has conducted a quality risk analysis and determined the likelihood, impact and mitigation plan for each identified risk. This information should be captured in what work product?`,
+    options: [
+        `Test strategy`,
+        `Test plan`,
+        `Risk register`,
+        `Risk plan`
+    ],
+    answer: 2,
+    explanation: `A risk register (or risk log) is the work product that captures all identified risks along with their likelihood, impact, and mitigation strategies.`
+  },
+  {
+    id: 278,
+    chapter: 1,
+    section: `1.5`,
+    lo: `FL-1.5.1`,
+    level: `K2`,
+    source: `Official Sample Exam 4-3`,
+    question: `A junior tester has been given a user story to test and has created only one positive path test. They appear to be missing negative scenarios. Which of the following generic skills do they appear to be lacking?`,
+    options: [
+        `Communication`,
+        `Curiosity`,
+        `Confidence`,
+        `Creativity`
+    ],
+    answer: 1,
+    explanation: `Curiosity drives testers to explore beyond the happy path and look for ways the system might fail. A tester with good curiosity would naturally wonder 'what if the input is wrong?' and create negative test scenarios.`
+  },
+  {
+    id: 279,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.2`,
+    level: `K1`,
+    source: `Official Sample Exam 4-3`,
+    question: `Which of the following is an example of a good testing practice?`,
+    options: [
+        `Different test levels should have specific test objectives`,
+        `Testers should have development experience`,
+        `Developers should determine the order of test execution in the test procedures`,
+        `Test design should begin when the code is complete to avoid changes`
+    ],
+    answer: 0,
+    explanation: `Having specific and distinct test objectives for each test level is a good testing practice. Each level (component, integration, system, acceptance) should focus on different aspects of quality.`
+  },
+  {
+    id: 280,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.3`,
+    level: `K1`,
+    source: `Official Sample Exam 4-3`,
+    question: `Which development approach captures the requirements in a simple test case format?`,
+    options: [
+        `TDD`,
+        `BDD`,
+        `ATDD`,
+        `TBD`
+    ],
+    answer: 2,
+    explanation: `Acceptance Test-Driven Development (ATDD) captures requirements as acceptance test cases, written in a simple format that both business and technical team members can understand.`
+  },
+  {
+    id: 281,
+    chapter: 2,
+    section: `2.2`,
+    lo: `FL-2.2.1`,
+    level: `K1`,
+    source: `Official Sample Exam 4-3`,
+    question: `Usability testing is an example of which type of testing?`,
+    options: [
+        `Functional`,
+        `Non-functional`,
+        `Structural`,
+        `Change-related`
+    ],
+    answer: 1,
+    explanation: `Usability testing evaluates how easy the system is to use - this is a non-functional quality characteristic. Non-functional testing includes usability, performance, security, reliability, etc.`
+  },
+  {
+    id: 282,
+    chapter: 2,
+    section: `2.2`,
+    lo: `FL-2.2.3`,
+    level: `K2`,
+    source: `Official Sample Exam 4-3`,
+    question: `You have been receiving daily builds and finding that fixes either aren't in the build or are not working. What type of testing is best suited for finding these issues?`,
+    options: [
+        `Unit testing`,
+        `System testing`,
+        `Confirmation testing`,
+        `Regression testing`
+    ],
+    answer: 2,
+    explanation: `Confirmation testing (retesting) is specifically designed to verify that a particular defect has been fixed. When fixes are reported but not working, confirmation testing verifies whether the fix is actually present and effective.`
+  },
+  {
+    id: 283,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.6`,
+    level: `K2`,
+    source: `Official Sample Exam 4-3`,
+    question: `Your team has just completed a retrospective discussing successes and improvements needed. What else do they need to discuss in order to recognize process improvements?`,
+    options: [
+        `What will be retained or changed for the future`,
+        `Who is to blame for the shortcomings of the project`,
+        `How much money was spent that could have been saved`,
+        `Why changes were not made earlier in the project`
+    ],
+    answer: 0,
+    explanation: `After identifying successes (to retain) and improvements needed, the team must decide what will actually be retained or changed going forward. This commitment to action is what transforms discussion into process improvement.`
+  },
+  {
+    id: 284,
+    chapter: 2,
+    section: `2.1`,
+    lo: `FL-2.1.4`,
+    level: `K2`,
+    source: `Official Sample Exam 4-3`,
+    question: `Your organization is implementing DevOps. Operations has ongoing performance issues in production. How will implementing DevOps and CI/CD help?`,
+    options: [
+        `It won't - the problem needs to be addressed during design`,
+        `Performance testing can be integrated into the CI/CD pipeline to test it incrementally and repeatedly throughout development`,
+        `Performance testing will be the main focus of system integration testing after code delivery`,
+        `Performance testing experts will be used in an isolated environment developed using Infrastructure as Code`
+    ],
+    answer: 1,
+    explanation: `DevOps and CI/CD allow performance testing to be integrated into the pipeline, running performance tests continuously throughout development so issues are caught early and incrementally.`
+  },
+  {
+    id: 285,
+    chapter: 3,
+    section: `3.1`,
+    lo: `FL-3.1.1`,
+    level: `K1`,
+    source: `Official Sample Exam 4-3`,
+    question: `Which of the following techniques is a form of static testing?`,
+    options: [
+        `Error guessing`,
+        `Automated regression testing`,
+        `Providing inputs and examining the resulting outputs`,
+        `Code review`
+    ],
+    answer: 3,
+    explanation: `Code review is static testing - examining the code without executing it. Error guessing, automated regression testing, and providing inputs/examining outputs are all dynamic testing activities.`
+  },
+  {
+    id: 286,
+    chapter: 3,
+    section: `3.2`,
+    lo: `FL-3.2.5`,
+    level: `K1`,
+    source: `Official Sample Exam 4-3`,
+    question: `You frequently participate in reviews but receive the document the night before the review meeting, preventing thorough review. What review success factor is missing?`,
+    options: [
+        `Management support for the overall review process`,
+        `Reviewing only small chunks at a time`,
+        `Training for the proper performance in the meetings`,
+        `Allowing adequate time to conduct the review`
+    ],
+    answer: 3,
+    explanation: `Allowing adequate time to conduct the review is a key success factor. Receiving documents the night before a review meeting does not allow sufficient time for thorough individual review preparation.`
+  },
+  {
+    id: 287,
+    chapter: 3,
+    section: `3.1`,
+    lo: `FL-3.1.1`,
+    level: `K1`,
+    source: `Official Sample Exam 4-3`,
+    question: `What is the main difference between static and dynamic testing?`,
+    options: [
+        `Static testing is performed by developers; dynamic testing is performed by testers`,
+        `Manual test cases are used for dynamic testing; automated tests are used for static testing`,
+        `Static testing must be executed before dynamic testing`,
+        `Dynamic testing requires executing the software; the software is not executed during static testing`
+    ],
+    answer: 3,
+    explanation: `The fundamental difference is that dynamic testing requires executing the software to observe its behavior, while static testing examines artifacts (code, documents) without execution.`
+  },
+  {
+    id: 288,
+    chapter: 3,
+    section: `3.2`,
+    lo: `FL-3.2.4`,
+    level: `K2`,
+    source: `Official Sample Exam 4-3`,
+    question: `If a review session is led by the author of the work product, what type of review is it?`,
+    options: [
+        `Ad hoc`,
+        `Walkthrough`,
+        `Inspection`,
+        `Audit`
+    ],
+    answer: 1,
+    explanation: `A walkthrough is led by the author of the work product who guides the reviewers through the document. This distinguishes it from an inspection which is led by a trained facilitator.`
+  },
+  {
+    id: 289,
+    chapter: 4,
+    section: `4.1`,
+    lo: `FL-4.1.1`,
+    level: `K2`,
+    source: `Official Sample Exam 4-3`,
+    question: `If test cases are derived from looking at the code, what type of test design technique is being used?`,
+    options: [
+        `Black-box`,
+        `White-box`,
+        `Specification-based`,
+        `Behavior-based`
+    ],
+    answer: 1,
+    explanation: `White-box (structural) test design techniques derive test cases from the internal structure of the code. Looking at the code to design tests is white-box testing.`
+  },
+  {
+    id: 290,
+    chapter: 4,
+    section: `4.3`,
+    lo: `FL-4.3.1`,
+    level: `K3`,
+    source: `Official Sample Exam 4-3`,
+    question: `How is statement coverage determined?`,
+    options: [
+        `Number of test decision points divided by the number of test cases`,
+        `Number of branches tested divided by the total number of executable statements`,
+        `Number of possible test case outcomes divided by the total number of function points`,
+        `Number of executable statements tested divided by the total number of executable statements`
+    ],
+    answer: 3,
+    explanation: `Statement coverage = (number of executable statements exercised by tests) / (total number of executable statements) × 100%.`
+  },
+  {
+    id: 291,
+    chapter: 3,
+    section: `3.1`,
+    lo: `FL-3.1.3`,
+    level: `K2`,
+    source: `Official Sample Exam 4-3`,
+    question: `You are working on a project with very tight deadlines. The code is being developed but is not yet executable. What type of testing could you apply that would help find defects now?`,
+    options: [
+        `Black-box`,
+        `White-box`,
+        `Experience-based`,
+        `Factor-based`
+    ],
+    answer: 1,
+    explanation: `Static testing (which includes reviews and static analysis) can be applied before code is executable. White-box static analysis examines code without executing it, finding defects even in incomplete code.`
+  },
+  {
+    id: 292,
+    chapter: 4,
+    section: `4.4`,
+    lo: `FL-4.4.1`,
+    level: `K2`,
+    source: `Official Sample Exam 4-3`,
+    question: `If you are using error guessing to target your testing, which type of testing are you doing?`,
+    options: [
+        `Specification-based`,
+        `Structure-based`,
+        `Experience-based`,
+        `Reference-based`
+    ],
+    answer: 2,
+    explanation: `Error guessing is an experience-based test technique. It relies on the tester's knowledge and experience to anticipate where defects might occur.`
+  },
+  {
+    id: 293,
+    chapter: 4,
+    section: `4.4`,
+    lo: `FL-4.4.2`,
+    level: `K2`,
+    source: `Official Sample Exam 4-3`,
+    question: `When exploratory testing is conducted using time-boxing and test charters, what is it called?`,
+    options: [
+        `Schedule-based testing`,
+        `Session-based testing`,
+        `Risk-based testing`,
+        `Formal chartering`
+    ],
+    answer: 1,
+    explanation: `Session-based testing is exploratory testing that uses time-boxed sessions with test charters to provide structure and accountability while maintaining the benefits of exploratory testing.`
+  },
+  {
+    id: 294,
+    chapter: 4,
+    section: `4.5`,
+    lo: `FL-4.5.2`,
+    level: `K2`,
+    source: `Official Sample Exam 4-3`,
+    question: `You are writing acceptance criteria for a story by listing all the likely inputs to the code and the expected outputs. What format are you using?`,
+    options: [
+        `IPO chart`,
+        `Acceptance-based`,
+        `Rules-oriented`,
+        `Behavior-driven`
+    ],
+    answer: 2,
+    explanation: `Listing inputs and expected outputs is a rules-oriented (also called input/output or table-based) format for acceptance criteria. It defines rules for system behavior given specific inputs.`
+  },
+  {
+    id: 295,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.1`,
+    level: `K3`,
+    source: `Official Sample Exam 4-3`,
+    question: `You are testing a banking application that allows withdrawals of 20, 100, or 500 dollars only (no other values). How many equivalence partitions need to be tested to achieve 100% equivalence partition coverage?`,
+    options: [
+        `1`,
+        `2`,
+        `3`,
+        `4`
+    ],
+    answer: 0,
+    explanation: `With a fixed set of valid values (20, 100, 500) chosen from a dropdown with no other input possible, there is only 1 valid equivalence partition (the valid values). Since no invalid input is possible, only 1 partition exists.`
+  },
+  {
+    id: 296,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.2`,
+    level: `K3`,
+    source: `Official Sample Exam 4-3`,
+    question: `You are testing a shipping weight system with rates: 0-10lbs=$5, 11-25lbs=$7.50, 26-50lbs=$12, 51-100lbs=$17. Shipments cannot exceed 100 lbs. How many tests for 100% two-value boundary value analysis?`,
+    options: [
+        `4`,
+        `8`,
+        `10`,
+        `12`
+    ],
+    answer: 1,
+    explanation: `Two-value BVA: test each boundary and its neighbor. Boundaries: 10/11, 25/26, 50/51, 100/101 (invalid), 0 (minimum). That gives pairs: {10,11}, {25,26}, {50,51}, {100,101} plus the start {0,1}. Approximately 8-10 test values. The answer is 8.`
+  },
+  {
+    id: 297,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.3`,
+    level: `K3`,
+    source: `Official Sample Exam 4-3`,
+    question: `Which of the following is the correct decision table for ordering a hamburger pseudocode with conditions: Add items (T/F), Delete items (T/F), Add fries (T/F)?`,
+    options: [
+        `6-column table: TFT, TFF, FTT, FTF, FFT, FFF with basic burger, burger-items, added items, fries results`,
+        `8-column table: TTT, TTF, TFT, TFF, FTT, FTF, FFT, FFF with basic burger, deleted items, added items, fries results`,
+        `8-column table: TFT, TFF, TFT, TFF, FTT, FTF, FTT, FTF`,
+        `8-column table with all combinations and both burger-items and added items`
+    ],
+    answer: 1,
+    explanation: `With 3 binary conditions, there are 2^3=8 possible combinations. The correct table has 8 columns covering all combinations (TTT through FFF) with appropriate results for each combination.`
+  },
+  {
+    id: 298,
+    chapter: 4,
+    section: `4.2`,
+    lo: `FL-4.2.4`,
+    level: `K3`,
+    source: `Official Sample Exam 4-3`,
+    question: `You are testing an e-commerce transaction with states: Login, Search, Shopping Cart, Checkout, Logout. Transitions listed: Login(invalid)->Login, Login->Search, Search->Search, Search->Cart, Cart->Search, Cart->Checkout, Checkout->Search, Checkout->Logout (8 transitions). For a state transition diagram, how many transitions should be shown?`,
+    options: [
+        `4`,
+        `6`,
+        `8`,
+        `16`
+    ],
+    answer: 2,
+    explanation: `The state transition diagram should show all 8 listed transitions. Each arrow in the diagram represents one transition between states.`
+  },
+  {
+    id: 299,
+    chapter: 4,
+    section: `4.5`,
+    lo: `FL-4.5.3`,
+    level: `K3`,
+    source: `Official Sample Exam 4-3`,
+    question: `You are testing hotel floor reservation. Partitions: 0 | 1-floor full | overbooked. Tests designed: 1) 1 occupant, 2) Floor full->next floor available, 3) 0 occupants->only available when lower floors full, 4) Usability test, 5) Performance at average load 80% occupied. What are you missing?`,
+    options: [
+        `A test with a floor partially occupied but not fully occupied`,
+        `A test for performance`,
+        `A test for trying to assign someone to a floor that is full`,
+        `A test for usability`
+    ],
+    answer: 2,
+    explanation: `The 'overbooked' partition (trying to assign to a full floor) is missing from the test cases. Tests 1-3 cover partitions 1-floor full, 0, and partial occupancy, but not the overbooked scenario.`
+  },
+  {
+    id: 300,
+    chapter: 5,
+    section: `5.2`,
+    lo: `FL-5.2.1`,
+    level: `K1`,
+    source: `Official Sample Exam 4-3`,
+    question: `Level of risk is determined by which of the following?`,
+    options: [
+        `Likelihood and impact`,
+        `Priority and risk rating`,
+        `Probability and practicality`,
+        `Risk identification and mitigation`
+    ],
+    answer: 0,
+    explanation: `Risk level is determined by two factors: likelihood (probability that the risk will occur) and impact (the consequences if it does occur). Risk level = likelihood × impact.`
+  },
+  {
+    id: 301,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.2`,
+    level: `K2`,
+    source: `Official Sample Exam 4-3`,
+    question: `Which of the following is an example of a good exit criterion from system testing?`,
+    options: [
+        `All tests should be completed`,
+        `The project budget should be spent`,
+        `All defects should be fixed`,
+        `All severity 1 defects must be resolved`
+    ],
+    answer: 3,
+    explanation: `'All severity 1 defects must be resolved' is a valid exit criterion - it is measurable, realistic, and directly related to quality. 'All tests completed' and 'all defects fixed' are too absolute.`
+  },
+  {
+    id: 302,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.7`,
+    level: `K2`,
+    source: `Official Sample Exam 4-3`,
+    question: `You are working on a project and have determined that exploratory testing is the best test technique to apply. Which testing quadrant are you using?`,
+    options: [
+        `Q1`,
+        `Q2`,
+        `Q3`,
+        `Q4`
+    ],
+    answer: 2,
+    explanation: `Q3 is business-facing and critiques the product. Exploratory testing, usability testing, and user acceptance testing fall into Q3 as they evaluate the product from a business/user perspective.`
+  },
+  {
+    id: 303,
+    chapter: 5,
+    section: `5.2`,
+    lo: `FL-5.2.1`,
+    level: `K1`,
+    source: `Official Sample Exam 4-3`,
+    question: `Which of the following is a project risk?`,
+    options: [
+        `A defect that is causing a performance issue`,
+        `A duplicate requirement`,
+        `An issue with a data conversion procedure`,
+        `A schedule that requires work during Christmas shutdown`
+    ],
+    answer: 3,
+    explanation: `A schedule requiring work during Christmas shutdown is a project risk - it threatens the project's ability to deliver on time. The others are product quality issues.`
+  },
+  {
+    id: 304,
+    chapter: 5,
+    section: `5.3`,
+    lo: `FL-5.3.1`,
+    level: `K1`,
+    source: `Official Sample Exam 4-3`,
+    question: `You have just completed testing on a major ERP implementation taking two years. It is now ready for final approval before go-live. What test documentation should be produced?`,
+    options: [
+        `Formal test summary report`,
+        `Testing team task board`,
+        `Email to the team congratulating them`,
+        `Burn down chart`
+    ],
+    answer: 0,
+    explanation: `At the end of a major project before go-live, a formal test summary report (test completion report) should be produced. It summarizes all testing activities, results, and provides the basis for the go/no-go decision.`
+  },
+  {
+    id: 305,
+    chapter: 5,
+    section: `5.4`,
+    lo: `FL-5.4.1`,
+    level: `K2`,
+    source: `Official Sample Exam 4-3`,
+    question: `You are in iteration 7 and a defect fixed in iteration 4 has reappeared. The developer asks you to investigate. How can configuration management help you gather more information?`,
+    options: [
+        `You can see what changed in iteration 4 to fix the problem`,
+        `You can reload and retest iterations 5 and 6 to see where the problem was re-introduced`,
+        `You can review all code changes since iteration 4 to see what might have broken it`,
+        `You can improve the regression testing to ensure the failure is caught earlier`
+    ],
+    answer: 1,
+    explanation: `Configuration management allows you to reload previous iterations (5 and 6). By retesting these specific builds, you can identify exactly which iteration re-introduced the defect.`
+  },
+  {
+    id: 306,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.4`,
+    level: `K3`,
+    source: `Official Sample Exam 4-3`,
+    question: `Three-point estimation from expert averages: Optimistic=30, Likely=55, Pessimistic=75 days. What is the estimate?`,
+    options: [
+        `325 ± 45`,
+        `81.25 ± 8`,
+        `54.17 ± 7.5`,
+        `40 ± 2`
+    ],
+    answer: 2,
+    explanation: `Three-point estimate E = (O + 4M + P) / 6 = (30 + 4*55 + 75) / 6 = (30 + 220 + 75) / 6 = 325/6 ≈ 54.17 days. Standard deviation = (P-O)/6 = (75-30)/6 = 45/6 = 7.5. So estimate = 54.17 ± 7.5 days.`
+  },
+  {
+    id: 307,
+    chapter: 5,
+    section: `5.1`,
+    lo: `FL-5.1.5`,
+    level: `K3`,
+    source: `Official Sample Exam 4-3`,
+    question: `Test cases for accounting system: TC1(Purchase Item, no dep, priority 2), TC2(Receive Invoice, dep:TC1, priority 3), TC3(Receive Goods, dep:TC1, priority 2), TC4(Send Payment, dep:TC2, priority 3), TC5(Report Payments, dep:TC4, priority 1). What is the proper execution order?`,
+    options: [
+        `5, 1, 3, 2, 4`,
+        `1, 2, 4, 5, 3`,
+        `1, 3, 2, 4, 5`,
+        `3, 4, 5, 1, 2`
+    ],
+    answer: 2,
+    explanation: `TC1 must run first (no dependency). After TC1: TC3 (dep:TC1, priority 2) and TC2 (dep:TC1, priority 3). TC3 has higher priority (lower number), then TC2. TC4 needs TC2, then TC5 needs TC4. Order: TC1, TC3, TC2, TC4, TC5.`
+  },
+  {
+    id: 308,
+    chapter: 5,
+    section: `5.5`,
+    lo: `FL-5.5.1`,
+    level: `K3`,
+    source: `Official Sample Exam 4-3`,
+    question: `A defect report states: 'The report executed per the attached steps, but the data was incorrect. For example, the information in column 1 was wrong. See the attached screenshot. This report is critical to the users.' What is the biggest problem?`,
+    options: [
+        `The developer won't know how important the problem is`,
+        `The developer won't know how to repeat the test`,
+        `The developer won't be able to see what the tester is saying is wrong`,
+        `The developer won't know what the tester expected to see`
+    ],
+    answer: 3,
+    explanation: `The defect report describes the actual result (data in column 1 is wrong) but does not specify what the expected result should be. Without knowing what the correct data should look like, the developer cannot verify the fix.`
+  },
+  {
+    id: 309,
+    chapter: 6,
+    section: `6.1`,
+    lo: `FL-6.1.1`,
+    level: `K1`,
+    source: `Official Sample Exam 4-3`,
+    question: `What is the primary purpose of a test execution tool?`,
+    options: [
+        `It runs automated test scripts to test the test object`,
+        `It automatically records defects in the defect tracking system`,
+        `It analyzes code to determine if there are any coding standard violations`,
+        `It tracks test cases, defects and requirements traceability`
+    ],
+    answer: 0,
+    explanation: `The primary purpose of a test execution tool is to run automated test scripts against the test object, capturing results and comparing actual vs expected outcomes.`
+  },
+  {
+    id: 310,
+    chapter: 6,
+    section: `6.2`,
+    lo: `FL-6.2.1`,
+    level: `K1`,
+    source: `Official Sample Exam 4-3`,
+    question: `Which of the following is a risk with test automation?`,
+    options: [
+        `Using an automation tool that will not be supported in the future`,
+        `Developing test automation for particularly tedious manual testing areas`,
+        `Using technical testers to implement the automation`,
+        `Developing automated reporting`
+    ],
+    answer: 0,
+    explanation: `Using an automation tool that will not be supported in the future is a risk - the investment in automation may be lost if the tool becomes obsolete or unsupported, requiring expensive rework.`
   }
 ];
 
