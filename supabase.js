@@ -32,15 +32,22 @@ async function initSupabase() {
   try {
     supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-    // Sign in anonymously — creates a persistent user session per browser
-    let { data: { session } } = await supabaseClient.auth.getSession();
-    if (!session) {
-      const { data } = await supabaseClient.auth.signInAnonymously();
-      session = data.session;
+    // Try anonymous auth; fall back to stored UUID if unavailable
+    try {
+      let { data: { session } } = await supabaseClient.auth.getSession();
+      if (!session) {
+        const { data } = await supabaseClient.auth.signInAnonymously();
+        session = data?.session;
+      }
+      if (session?.user?.id) {
+        deviceId = session.user.id;
+      }
+    } catch (authErr) {
+      console.warn('Anonymous auth unavailable, using device UUID:', authErr);
     }
-    deviceId = session?.user?.id || localStorage.getItem('istqb_device_id');
+
     if (!deviceId) {
-      deviceId = crypto.randomUUID();
+      deviceId = localStorage.getItem('istqb_device_id') || crypto.randomUUID();
     }
     localStorage.setItem('istqb_device_id', deviceId);
 
